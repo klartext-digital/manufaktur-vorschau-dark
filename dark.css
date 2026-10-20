@@ -1,0 +1,167 @@
+/* ==========================================================================
+   The Vanilla – DARK
+   Schwarz als Grund, echtes Gold (Metallverlauf), Vanille-Creme als helle
+   Bühne für die Produkte. Wird nach dem Seiten-CSS geladen und überschreibt es.
+   ========================================================================== */
+:root{
+  --noir:#0A0907; --noir-2:#100F0C; --noir-3:#17150F; --noir-4:#211D16;
+  --vanilla:#F4EAD5; --vanilla-2:#EBDDC1; --vanilla-3:#DDCBA6;
+  --gold:#C9A24C; --gold-2:#D8B661; --gold-bright:#E8CB7F; --gold-deep:#9C7A2E;
+  --gold-metal:linear-gradient(135deg,#8E6B24 0%,#D6B45B 26%,#F4E0A1 46%,#C59B40 66%,#EBD08A 100%);
+  --gold-text:linear-gradient(180deg,#F6E4A8 0%,#E2C274 40%,#B8903A 100%);
+
+  /* Grundtokens umgedreht: Flächen dunkel, Schrift Creme */
+  --cream-0:#0A0907; --cream-1:#0D0C09; --cream-2:#16140F; --cream-3:#1F1C16;
+  --ink:#F3EADA; --ink-2:#E2D7C3; --ink-soft:#A99F8C;
+  --line:rgba(243,234,218,.11); --line-2:rgba(255,255,255,.14);
+  --dtxt:#F3EADA; --green:#7FA86F;
+}
+
+/* ---------- helle Inseln: Produkte stehen auf Vanille-Creme ---------- */
+.pcard,.rcard,.bundle,.nlx-form,.gthumbs button,.bundle .bimg{
+  --ink:#171614; --ink-2:#26241F; --ink-soft:#6A6253; --line:rgba(23,22,20,.13); --cream-1:#FBF6EC; --cream-2:#F1E6CF;
+  color:#171614;
+}
+
+html{background:var(--noir);color-scheme:dark}
+body{background:var(--noir);
+  background-image:radial-gradient(1100px 620px at 85% -6%,rgba(201,162,76,.10),transparent 62%),
+                   radial-gradient(900px 700px at -10% 40%,rgba(201,162,76,.05),transparent 60%),
+                   linear-gradient(180deg,#0B0A08,#0A0907 60%,#0D0B08);
+  background-attachment:fixed;color:var(--ink)}
+body::after{mix-blend-mode:screen;opacity:.035}
+::selection{background:var(--gold);color:var(--noir)}
+.gold-dot,.pl-title h1 .gold-dot{color:var(--gold-bright)}
+
+/* ---------- Buttons ---------- */
+.btn::before{background:var(--vanilla)}
+.btn-gold{background:var(--gold-metal);background-size:140% 140%;color:#140F05;box-shadow:0 14px 34px -18px rgba(201,162,76,.55),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-gold::before{background:var(--vanilla)}.btn-gold:hover{color:#140F05}
+.btn-dark{background:var(--vanilla);color:var(--noir)}.btn-dark::before{background:var(--gold-metal)}.btn-dark:hover{color:var(--noir)}
+.btn-outline{border-color:rgba(243,234,218,.55);color:var(--ink)}.btn-outline::before{background:var(--vanilla)}.btn-outline:hover{color:var(--noir);border-color:var(--vanilla)}
+.btn-light{background:var(--vanilla);color:var(--noir)}.btn-light::before{background:var(--gold-metal)}.btn-light:hover{color:var(--noir)}
+.hero-cta .btn-outline:hover{color:var(--noir)}
+/* Buttons auf den hellen Produktkarten */
+.pcard .btn-outline,.rcard .btn-outline{border-color:#171614;color:#171614}
+.pcard .btn-outline::before,.rcard .btn-outline::before{background:#171614}
+.pcard .btn-outline:hover,.rcard .btn-outline:hover{color:var(--vanilla);border-color:#171614}
+
+/* ---------- Topbar + Header ---------- */
+.topbar{background:#050403;color:var(--ink-2);border-bottom:1px solid rgba(201,162,76,.22)}
+.topbar b,.tb-mid b{color:var(--gold-bright)}
+header{background:rgba(10,9,7,.86);border-bottom:1px solid rgba(201,162,76,.14)}
+header.scrolled{box-shadow:0 10px 30px -18px rgba(0,0,0,.8);border-color:rgba(201,162,76,.22)}
+.menu a::after{background:var(--gold-metal)}
+.cart-dot b{background:var(--gold-metal);color:#140F05}
+.vrail{background:var(--noir-3);border:1px solid rgba(201,162,76,.28);border-left:0}
+
+/* ---------- Kundenlogos: dunkle Fassung -> Creme ---------- */
+.kunden-title{color:var(--ink-2)}
+.kl img{filter:invert(1) sepia(.32) saturate(1.1) brightness(.92);opacity:.72}
+.kl:hover img{opacity:1}
+
+/* ---------- Kategorien ---------- */
+.shopsec{background:transparent}
+.shopsec .shop-bg{opacity:.22;filter:saturate(.7) brightness(.8)}
+.shopsec::after{background:linear-gradient(180deg,rgba(10,9,7,.55) 0%,rgba(10,9,7,.2) 45%,rgba(10,9,7,.92) 100%)}
+.shop-allbtn{background:transparent;color:var(--ink);border-color:var(--gold)}
+.shop-allbtn:hover{background:var(--gold-metal);color:#140F05;border-color:transparent}
+.cat{box-shadow:0 24px 50px -28px rgba(0,0,0,.85);outline:1px solid rgba(201,162,76,.16);outline-offset:-1px}
+.cat:hover{box-shadow:0 40px 70px -32px rgba(0,0,0,.9),0 0 0 1px rgba(201,162,76,.35)}
+.cat .cbtn:hover{background:var(--gold-metal);border-color:transparent;color:#140F05}
+
+/* ---------- Produktkarten: helle Vanille-Bühne ---------- */
+.pcard,.rcard{background:linear-gradient(180deg,#F7EFDD 0%,#F1E5CB 100%);border:1px solid rgba(232,203,127,.55);
+  box-shadow:0 26px 60px -34px rgba(0,0,0,.9)}
+.pcard:hover,.rcard:hover{box-shadow:0 34px 70px -30px rgba(0,0,0,.95),0 0 0 1px rgba(232,203,127,.9),0 18px 60px -20px rgba(201,162,76,.32)}
+.pcard-body h3 a:hover{color:var(--gold-deep)}
+.pprice{color:#171614}
+.badge-new,.badge-aktion{background:var(--gold-metal);color:#140F05;box-shadow:0 6px 16px -8px rgba(0,0,0,.6)}
+.heart{background:rgba(247,239,221,.95);border-color:rgba(23,22,20,.1)}
+.heart.on svg,.heart:hover svg{fill:var(--gold-deep);stroke:var(--gold-deep)}
+.rating .stars,.rcard .p{color:var(--gold-deep)}
+.pcard .rating .stars{color:var(--gold-deep)}
+
+/* ---------- Film + Qualitaet + Statement ---------- */
+.filmwrap,.filmcanvas{background:var(--noir)}
+.film-stat,.film-stat-2,.bignum{background:var(--gold-text);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;
+  filter:drop-shadow(0 10px 30px rgba(0,0,0,.6))}
+.dark{background:var(--noir-2);border:1px solid rgba(201,162,76,.18)}
+.stmtsec{background:#0C0A08}
+.stmt-big .hl{background:var(--gold-metal);color:#140F05}
+
+/* ---------- Kundenstimmen ---------- */
+.tcard{background:var(--noir-3);border:1px solid var(--line)}
+.tcard:hover{box-shadow:0 30px 60px -30px rgba(0,0,0,.9),0 0 0 1px rgba(201,162,76,.32)}
+.tphoto{background:var(--noir-4)}
+.tname{background:rgba(201,162,76,.12);color:var(--ink)}
+.tst-arrow{background:var(--noir-3);color:var(--ink);border-color:rgba(201,162,76,.3)}
+.tst-arrow:hover{background:var(--gold-metal);color:#140F05;border-color:transparent}
+
+/* ---------- Vergleich, Rezepte, Stimmen ---------- */
+.cmpsec{background:#0B0907}
+.recipes{background:var(--noir-2);color:var(--ink)}
+.recipes::before{background:radial-gradient(ellipse 52% 58% at 50% 48%,rgba(8,7,5,.78) 0%,rgba(8,7,5,.5) 55%,rgba(8,7,5,.2) 100%)}
+.recipes .eyebrow{color:var(--gold-bright)}
+.recipes p{color:var(--ink-2)}
+.voice{background:var(--noir-3);border-color:var(--line)}
+.news input{background:var(--vanilla);color:#171614;border-color:transparent}
+
+/* ---------- Newsletter ---------- */
+.nlx{background:#0B0907;box-shadow:0 50px 90px -50px rgba(0,0,0,.9);outline:1px solid rgba(201,162,76,.14);outline-offset:-1px}
+.nlx-form{background:var(--vanilla)}
+.nlx-form input{color:#171614}.nlx-form input::placeholder{color:#7A7262}
+.nlx-form button{background:var(--gold-metal);color:#140F05}
+.nlx-form button:hover{background:var(--gold-bright)}
+
+/* ---------- FAQ, Trust, Footer ---------- */
+.faq-item summary:hover,.faq-item[open] summary,.acc details[open] summary{color:var(--gold-bright)}
+footer{background:#060504;border-top:1px solid rgba(201,162,76,.2)}
+.f-social a:hover{background:var(--gold-metal);color:#140F05;border-color:transparent}
+.bsec{background:transparent}
+.bsec::after{background:linear-gradient(180deg,var(--noir) 0%,rgba(10,9,7,.6) 12%,rgba(10,9,7,.55) 50%,rgba(10,9,7,.9) 100%)}
+
+/* ---------- Shop-Seite (produkte.html) ---------- */
+.pl-tools{background:rgba(10,9,7,.9);border-color:rgba(201,162,76,.16)}
+.chip{border-color:rgba(243,234,218,.18);color:var(--ink)}
+.chip:hover{border-color:var(--gold)}
+.chip.on{background:var(--gold-metal);border-color:transparent;color:#140F05}
+.pl-sort select{color:var(--ink);border-color:rgba(243,234,218,.18);background-color:transparent}
+.pl-sort select option{background:var(--noir-3);color:var(--ink)}
+.pl-cta{background:var(--noir-3);border:1px solid rgba(201,162,76,.25)}
+.pcard .psizes span{color:#6A6253;border-color:rgba(23,22,20,.16)}
+
+/* ---------- Produktseite + Geschenkset ---------- */
+.crumb span{color:var(--ink)}
+.gbadge,.price .save,.bundle .tag{background:var(--gold-metal);color:#140F05}
+.bundle .tag.tag-firm{background:#171614;color:var(--vanilla)}
+.gmain{box-shadow:0 40px 90px -40px rgba(0,0,0,.95),0 0 0 1px rgba(232,203,127,.5)}
+.gthumbs button.active{border-color:var(--gold-bright);box-shadow:0 0 0 1px var(--gold-bright)}
+.social{background:var(--noir-3);border-color:var(--line)}
+.social .avs span{border-color:var(--noir-3);color:#140F05;background:var(--gold-metal)}
+.benefits .chk{background:rgba(201,162,76,.14);border-color:rgba(201,162,76,.4)}
+.benefits .chk svg,.charity svg{stroke:var(--gold-bright)}
+.bundle{background:linear-gradient(180deg,#F7EFDD,#F0E3C8);border-color:rgba(232,203,127,.6)}
+.bundle:hover{border-color:var(--gold)}
+.bundle.sel{border-color:#171614;box-shadow:0 0 0 1px #171614,0 16px 34px -20px rgba(201,162,76,.5)}
+.bundle-lbl-firm{color:var(--gold-bright)}
+.tstep .ci{background:var(--noir-4);border:1px solid rgba(201,162,76,.45)}
+.tstep svg{stroke:var(--gold-bright)}
+.charity{background:var(--noir-3);border-color:var(--line)}
+.acc .ico-pm::before,.acc .ico-pm::after{background:var(--ink)}
+.rcardr{background:var(--noir-3);border-color:var(--line);box-shadow:0 24px 50px -34px rgba(0,0,0,.9)}
+.rcardr .stars{color:var(--gold-bright)}
+.rcardr .who .ava{background:var(--gold-metal);color:#140F05}
+.b2bsec{background:var(--noir-2);border-block:1px solid rgba(201,162,76,.16)}
+.b2b-cta{background:var(--gold-metal);color:#140F05}
+.b2b-cta:hover{color:#140F05}
+.tier.featured{border-color:rgba(232,203,127,.6)}
+footer a{color:rgba(243,234,218,.72)}
+
+/* Textfarbe dunkler Sektionen (Original nutzte --cream-1 als Schriftfarbe) */
+.topbar,.dark,.stmtsec,.cmpsec,footer,.b2bsec{color:var(--ink)}
+.ccrit{color:var(--ink)}
+/* Kauf-Knopf auf Produkt- und Geschenkseite: echtes Gold */
+main .btn-dark{background:var(--gold-metal);color:#140F05;box-shadow:0 16px 36px -18px rgba(201,162,76,.6),inset 0 1px 0 rgba(255,255,255,.35)}
+main .btn-dark::before{background:var(--vanilla)}
+main .btn-dark:hover{color:#140F05}
