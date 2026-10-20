@@ -165,3 +165,8 @@ footer a{color:rgba(243,234,218,.72)}
 main .btn-dark{background:var(--gold-metal);color:#140F05;box-shadow:0 16px 36px -18px rgba(201,162,76,.6),inset 0 1px 0 rgba(255,255,255,.35)}
 main .btn-dark::before{background:var(--vanilla)}
 main .btn-dark:hover{color:#140F05}
+
+/* Bestseller direkt unter den Kundenlogos (Kategorien entfernt) */
+.bsec{padding-top:clamp(56px,6.5vw,104px)}
+.bsec .sec-head{margin-bottom:clamp(30px,3.6vw,52px)}
+.bsec-bg{opacity:.55}
