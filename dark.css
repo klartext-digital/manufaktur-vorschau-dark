@@ -170,3 +170,14 @@ main .btn-dark:hover{color:#140F05}
 .bsec{padding-top:clamp(56px,6.5vw,104px)}
 .bsec .sec-head{margin-bottom:clamp(30px,3.6vw,52px)}
 .bsec-bg{opacity:.55}
+
+/* Sekundäre CTAs als Textlink (nur Haupt-CTAs bleiben Buttons) */
+.cta-link{display:inline-flex;align-items:center;gap:12px;align-self:center;padding:0 0 7px;border:0;border-bottom:1.5px solid var(--gold);background:none;
+  font:inherit;font-weight:600;font-size:1rem;letter-spacing:.01em;color:var(--ink);cursor:pointer;white-space:nowrap;transition:color .25s,border-color .25s}
+.cta-link .arrow{color:var(--gold-bright);font-size:1.05em;line-height:1;display:inline-block;transition:transform .3s cubic-bezier(.2,.7,.3,1)}
+.cta-link:hover{color:var(--gold-bright);border-color:var(--gold-bright)}
+.cta-link:hover .arrow{transform:translate(3px,-3px)}
+.cta-link:focus-visible{outline:2px solid var(--gold-bright);outline-offset:6px;border-radius:2px}
+.hero-cta{align-items:center;gap:clamp(22px,2.6vw,36px)}
+.rd-act{align-items:center;gap:28px}
+@media(max-width:600px){.sec-head .cta-link{align-self:flex-start}}
