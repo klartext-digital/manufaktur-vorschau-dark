@@ -181,3 +181,50 @@ main .btn-dark:hover{color:#140F05}
 .hero-cta{align-items:center;gap:clamp(22px,2.6vw,36px)}
 .rd-act{align-items:center;gap:28px}
 @media(max-width:600px){.sec-head .cta-link{align-self:flex-start}}
+
+/* ---------- Vanillin-Film: Zahl, Einzug, CTA ---------- */
+/* Komma-Unterlaenge lag ausserhalb der Box und wurde vom Text-Clip abgeschnitten (2,63 sah aus wie 2.63) */
+.film-stat{line-height:1;padding-bottom:.14em;margin-bottom:-.14em}
+/* % klein, oben buendig mit der Ziffernhoehe statt ueber der Zeile zu schweben */
+.film-stat span{font-size:.42em;vertical-align:baseline;position:relative;top:-.54em;margin-left:.04em}
+.film-stat-2{margin-top:.02em}
+/* Texte auf die globale Einzugskante statt an den Bildrand */
+@media(min-width:821px){
+  .film-left{left:var(--pad)}
+  .film-right{right:var(--pad)}
+}
+/* die Untertitel-Regel (.film-bottom span) traf auch den Button-Text: Button wieder wie alle Haupt-CTAs */
+.film-bottom .btn span{font:inherit;letter-spacing:inherit;text-transform:none;color:inherit}
+
+/* ---------- Kopf: exakte Ausrichtung ---------- */
+.brand{padding-left:0!important}
+/* Desktop: Topbar und Kopf auf der Aussenkante (wie Hero-Box, Produktraster, Bild-Banner),
+   damit das Menue echt mittig stehen kann, ohne ins Logo zu laufen */
+@media(min-width:901px){
+  :root{--head-h:100px}
+  .topbar .wrap,header .wrap{padding-inline:var(--pad-hero)}
+  .brand img{height:66px!important}
+  .menu{gap:38px;font-size:1.02rem}
+  .nav-ico{gap:22px}
+}
+@media(min-width:1024px){
+  /* drei Spalten, aussen gleich breit: Mitte = Seitenmitte */
+  .topbar .wrap:has(.tb-mid){display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:16px}
+  .tb-soc{justify-self:start}
+  .tb-right{justify-self:end}
+  .tb-mid{flex:none}
+  .nav{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:20px}
+  .brand{justify-self:start}
+  .menu{justify-self:center}
+  .nav-ico{justify-self:end}
+}
+@media(min-width:1024px) and (max-width:1439px){.menu{gap:clamp(16px,calc(2.6vw - 4px),34px)}}
+@media(min-width:1024px) and (max-width:1279px){.brand img{height:clamp(46px,4.1vw,52px)!important}.nav-ico{gap:16px}}
+/* darunter reicht der Platz nicht fuer Logo + 5 Menuepunkte + Icons: Burger wie auf dem Tablet */
+@media(min-width:901px) and (max-width:1023px){
+  .menu{display:none}
+  .burger{display:grid;place-items:center}
+  .brand img{height:52px!important}
+}
+/* Tablet: Social + Sprache/Waehrung haben neben dem Hinweis keinen Platz mehr, Hinweis steht dann allein und mittig */
+@media(min-width:701px) and (max-width:1023px){.tb-soc,.tb-right{display:none}.tb-mid{text-align:center}}
