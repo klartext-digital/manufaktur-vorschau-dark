@@ -286,3 +286,6 @@ main .btn-dark:hover{color:#140F05}
   .pl-cta .btn{grid-column:1;grid-row:2;justify-self:start}
   .pl-cta-vis{grid-column:2;grid-row:1 / span 2;width:clamp(190px,24vw,250px);margin-right:0}
 }
+
+/* ---------- Keine Markierungen oben links auf Bildern (NEU, AKTION, Geschenkidee, Rezept-Kategorie) ---------- */
+.badge-new,.badge-aktion,.gbadge,.rc-tag{display:none!important}
