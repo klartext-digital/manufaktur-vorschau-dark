@@ -228,3 +228,32 @@ main .btn-dark:hover{color:#140F05}
 }
 /* Tablet: Social + Sprache/Waehrung haben neben dem Hinweis keinen Platz mehr, Hinweis steht dann allein und mittig */
 @media(min-width:701px) and (max-width:1023px){.tb-soc,.tb-right{display:none}.tb-mid{text-align:center}}
+
+/* ---------- Produktkarten kompakter ---------- */
+.pattr{display:none}
+.pcard-body{padding:16px 20px 16px;gap:4px}
+.pnote{margin-bottom:12px}
+/* Button + Lieferstatus unten buendig, egal ob der Titel ein- oder zweizeilig ist */
+.pcard .btn{margin-top:auto}
+.pavail{margin-top:9px}
+.rcard .b{padding:14px 18px 16px}
+.pcard .btn{padding:.9em 1em;white-space:nowrap}
+@media(max-width:600px){.pcard .btn{white-space:normal;padding:.7em .5em;line-height:1.2}}
+@media(max-width:360px){.pcard .btn{font-size:.7rem;padding:.65em .25em}}
+
+/* ---------- Newsletter: Stephan links gross, Text rechts mittig ---------- */
+.nlx-pic{display:contents}
+@media(min-width:861px){
+  .nlx{height:clamp(540px,calc((100vw - 2*var(--pad-hero))/2.2),760px)}
+  .nlx-bg{object-position:0% 100%;transform:none}
+  .nlx::before{left:auto;right:0;top:0;bottom:0;width:60%;height:auto;
+    background:linear-gradient(90deg,rgba(12,9,6,0),rgba(12,9,6,.5) 40%,rgba(12,9,6,.62))}
+  .nlx-in{left:52%;right:0;top:0;bottom:0;align-items:flex-start;justify-content:center;text-align:left;
+    padding:clamp(32px,3vw,48px) clamp(28px,var(--hero-in),112px) clamp(32px,3vw,48px) clamp(12px,1.5vw,24px)}
+  .nlx h2{font-size:clamp(2rem,3.4vw,3.5rem);max-width:none}
+  .nlx-sub{max-width:44ch}
+  .nlx-form{width:100%;max-width:520px}
+}
+@media(min-width:861px) and (max-width:1200px){.nlx-in{left:47%;padding-right:clamp(24px,4vw,48px)}.nlx-form button{padding-inline:1.2em}}
+@media(max-width:860px){.nlx-bg{aspect-ratio:5/4;object-position:12% 100%;transform:none;margin-top:-24px}}
+@media(max-width:860px){.nlx-form{background:transparent;box-shadow:none}}
