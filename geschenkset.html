@@ -288,8 +288,11 @@ footer a{color:rgba(255,255,255,.72);font-size:.92rem}footer a:hover{color:#fff}
       <span class="gbadge">Geschenkidee</span>
       <img id="gmain" src="img/produkte/geschenk-1.jpg" alt="The Vanilla Geschenkpackung">
     </div>
-    <div class="gthumbs" id="gthumbs" style="display:none">
+    <div class="gthumbs" id="gthumbs">
       <button class="active" data-src="img/produkte/geschenk-1.jpg" data-fit="cover"><img src="img/produkte/geschenk-1.jpg" alt=""></button>
+      <button data-src="img/echt/geschenk-set.jpg" data-fit="cover"><img src="img/echt/geschenk-set.jpg" alt="" loading="lazy"></button>
+      <button data-src="img/echt/geschenk-set-2.jpg" data-fit="cover"><img src="img/echt/geschenk-set-2.jpg" alt="" loading="lazy"></button>
+      <button data-src="img/echt/geschenk-tuete.jpg" data-fit="cover"><img src="img/echt/geschenk-tuete.jpg" alt="" loading="lazy"></button>
     </div>
   </section>
 
@@ -466,6 +469,16 @@ setInterval(()=>{t=Math.max(0,t-1);const h=Math.floor(t/3600),m=Math.floor(t%360
 // reveals
 const io=new IntersectionObserver((es)=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+<script>
+/* Galerie steht ab dem ersten Pixel fix: Klebepunkt = Startposition; passt sie nicht ins Fenster, wird das Hauptbild etwas kleiner */
+(function(){const g=document.querySelector('.gallery'),m=g&&g.querySelector('.gmain');if(!g)return;
+ function fix(){g.style.top='';if(m)m.style.maxWidth='';if(getComputedStyle(g).position!=='sticky')return;
+  const y0=g.getBoundingClientRect().top+scrollY, over=g.offsetHeight-(innerHeight-y0-16);
+  if(over>0&&m&&m.offsetWidth-over>=320)m.style.maxWidth=(m.offsetWidth-over)+'px';
+  const over2=g.offsetHeight-(innerHeight-y0-16);
+  g.style.top=(over2>0?y0-over2:y0)+'px';}
+ addEventListener('load',fix);addEventListener('resize',fix);fix();})();
 </script>
 </body>
 </html>
