@@ -289,3 +289,9 @@ main .btn-dark:hover{color:#140F05}
 
 /* ---------- Keine Markierungen oben links auf Bildern (NEU, AKTION, Geschenkidee, Rezept-Kategorie) ---------- */
 .badge-new,.badge-aktion,.gbadge,.rc-tag{display:none!important}
+
+/* ---------- Hover: echtes Produktfoto blendet ueber das inszenierte (wie das Video bei Paste/Sirup) ---------- */
+.pcard-media .pimg-alt{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;opacity:0;z-index:1;pointer-events:none;
+  transform:scale(1.06);transition:opacity .5s ease,transform .8s cubic-bezier(.2,.7,.3,1)}
+.pcard:hover .pimg-alt,.pcard:focus-within .pimg-alt{opacity:1;transform:scale(1)}
+@media(prefers-reduced-motion:reduce){.pcard-media .pimg-alt{transition:opacity .2s;transform:none}}

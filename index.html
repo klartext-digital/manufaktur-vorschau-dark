@@ -560,7 +560,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 .cat-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 50%;opacity:0;transition:opacity .45s ease;pointer-events:none}
 .cat:hover .cat-vid{opacity:1}
 </style>
-<link rel="stylesheet" href="dark.css?v=9">
+<link rel="stylesheet" href="dark.css?v=10">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#0A0907">
 </head>
@@ -839,9 +839,9 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 <script>
 const products=[
  {n:"Vanillepaste im Glas",note:"100 g · ohne Alkohol · auch für Kinder",link:"produkt.html?p=vanillepaste",r:"",c:"",p:"22.00",pre:"",img:"produkte/paste-1.jpg",vid:"paste-quer-w.mp4",vpos:"55% 50%",new:1},
- {n:"Gourmet Vanillepulver",note:"25 g · 100 % rein",link:"produkt.html?p=vanillepulver",r:"",c:"",p:"31.50",pre:"ab ",img:"produkte/pulver-1.jpg",new:1},
+ {n:"Gourmet Vanillepulver",note:"25 g · 100 % rein",link:"produkt.html?p=vanillepulver",r:"",c:"",p:"31.50",pre:"ab ",img:"produkte/pulver-1.jpg",alt:"echt/pulver-deckel.jpg",new:1},
  {n:"Vanilleschoten «Extra» im Reagenzglas",note:"21–23 cm · 2 Stück",link:"produkt.html?p=vanilleschoten-extra-21-23cm-im-reagenzglas",r:"",c:"",p:"14.00",pre:"",img:"produkte/schoten-1.jpg",new:0},
- {n:"Vanille-Salz fein",note:"Meersalz mit 5,4 % Vanille",link:"produkt.html?p=vanille-salz-feine-kornung",r:"",c:"",p:"9.50",pre:"ab ",img:"produkte/salz-fein-1.jpg",new:0},
+ {n:"Vanille-Salz fein",note:"Meersalz mit 5,4 % Vanille",link:"produkt.html?p=vanille-salz-feine-kornung",r:"",c:"",p:"9.50",pre:"ab ",img:"produkte/salz-fein-1.jpg",alt:"echt/salz-fein-glas.jpg",new:0},
  {n:"Geschenkpackung",note:"3 Mini-Gläser + 2 Vanilleschoten",link:"geschenkset.html",r:"",c:"",p:"32.50",pre:"",img:"produkte/geschenk-1.jpg",new:1}
 ];
 document.getElementById('prods').innerHTML=products.map(p=>`
@@ -850,6 +850,7 @@ document.getElementById('prods').innerHTML=products.map(p=>`
      ${p.new?'<span class="badge-new">Neu</span>':''}
      <div class="heart"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9C1 8.5 3 5 6.5 5 9 5 12 8 12 8s3-3 5.5-3C21 5 23 8.5 21.5 12 19 16.5 12 21 12 21z"/></svg></div>
      <a class="pcard-link" href="${p.link||'produkt.html'}" aria-label="${p.n} ansehen"><img src="img/${p.img}" alt="${p.n}" loading="lazy"></a>
+     ${p.alt&&!p.vid?`<img class="pimg-alt" src="img/${p.alt}" alt="" loading="lazy">`:''}
      ${p.vid?`<video class="pcard-vid" muted loop playsinline preload="none" poster="img/${p.img}"${p.vpos?` style="object-position:${p.vpos}"`:''}><source src="img/vid/${p.vid}" type="video/mp4"></video>`:''}
    </div>
    <div class="pcard-body">
