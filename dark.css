@@ -296,4 +296,5 @@ main .btn-dark:hover{color:#140F05}
 .pcard:hover .pimg-alt,.pcard:focus-within .pimg-alt{opacity:1;transform:scale(1)}
 @media(prefers-reduced-motion:reduce){.pcard-media .pimg-alt{transition:opacity .2s;transform:none}}
 /* Stephan-Fotos: Kopf sitzt oben im Bild, in der 5:4-Karte nicht abschneiden */
-.pcard-media .pimg-alt[src*="stephan-schoten"]:not([src*="haende"]){object-position:50% 12%}
+.pcard-media .pimg-alt[src*="stephan-schoten"]{object-position:50% 12%}
+.pcard-media .pimg-alt[src*="stephan-schoten-haende"]{object-position:50% 40%}
