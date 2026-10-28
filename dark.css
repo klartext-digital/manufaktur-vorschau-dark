@@ -255,7 +255,7 @@ main .btn-dark:hover{color:#140F05}
   .nlx-form{width:100%;max-width:520px}
 }
 @media(min-width:861px) and (max-width:1200px){.nlx-in{left:47%;padding-right:clamp(24px,4vw,48px)}.nlx-form button{padding-inline:1.2em}}
-@media(max-width:860px){.nlx-bg{aspect-ratio:5/4;object-position:12% 100%;transform:none;margin-top:-24px}}
+@media(max-width:860px){.nlx-bg{aspect-ratio:5/4;object-position:4% 100%;transform:none;margin-top:-24px}}
 @media(max-width:860px){.nlx-form{background:transparent;box-shadow:none}}
 
 /* ---------- Kacheln ueberall kleiner: Bild 5:4 statt quadratisch, Shop ab 1500 px fuenfspaltig ---------- */
