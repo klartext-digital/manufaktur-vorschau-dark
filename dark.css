@@ -298,3 +298,5 @@ main .btn-dark:hover{color:#140F05}
 /* Stephan-Fotos: Kopf sitzt oben im Bild, in der 5:4-Karte nicht abschneiden */
 .pcard-media .pimg-alt[src*="stephan-schoten"]{object-position:50% 12%}
 .pcard-media .pimg-alt[src*="stephan-schoten-haende"]{object-position:50% 40%}
+/* Stephan streut aus der Hand: erhobene Hand und Glas in der 5:4-Karte sichtbar halten */
+.pcard-media .pimg-alt[src*="-stephan.jpg"]{object-position:50% 30%}
