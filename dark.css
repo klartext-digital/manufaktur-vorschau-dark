@@ -305,3 +305,9 @@ main .btn-dark:hover{color:#140F05}
 .pcard-media .pimg-alt[src*="stephan-schoten"]{object-position:50% 92%}
 /* Stephan streut aus der Hand: erhobene Hand und Glas in der 5:4-Karte sichtbar halten */
 .pcard-media .pimg-alt[src*="-stephan.jpg"]{object-position:50% 30%}
+
+/* Aktion-Hinweis (Tahitensis): nicht aufs Bild, sondern als goldener Knopf neben den Preis */
+.pact{display:inline-block;vertical-align:middle;margin-left:10px;background:var(--gold-metal);color:#140F05;font-family:Inter,system-ui,sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;line-height:1;padding:.55em 1em;border-radius:var(--r-pill);position:relative;top:-1px}
+.price .save.pact{margin-left:0;font-size:.72rem;padding:7px 14px;align-self:center;top:0}
+/* Vanillin-Satz ist mit "in der Schweiz" laenger: keine einzelne Restzeile */
+.film-left p{max-width:34ch;text-wrap:pretty}
