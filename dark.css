@@ -219,9 +219,15 @@ main .btn-dark:hover{color:#140F05}
   .nav-ico{justify-self:end}
 }
 @media(min-width:1024px) and (max-width:1439px){.menu{gap:clamp(16px,calc(2.6vw - 4px),34px)}}
-@media(min-width:1024px) and (max-width:1279px){.brand img{height:clamp(46px,4.1vw,52px)!important}.nav-ico{gap:16px}}
-/* darunter reicht der Platz nicht fuer Logo + 5 Menuepunkte + Icons: Burger wie auf dem Tablet */
-@media(min-width:901px) and (max-width:1023px){
+/* 6 Menuepunkte inkl. "Maerkte & Weihnachtsmaerkte": echt mittig erst ab 1680 px,
+   darunter mittig im freien Platz zwischen Logo und Icons */
+@media(min-width:1280px) and (max-width:1679px){
+  .nav{grid-template-columns:auto minmax(0,1fr) auto;gap:28px}
+  .menu{gap:clamp(18px,calc(3.4vw - 26px),34px)}
+}
+@media(min-width:1280px) and (max-width:1439px){.brand img{height:54px!important}.menu{font-size:.96rem}.nav-ico{gap:18px}}
+/* darunter reicht der Platz nicht fuer Logo + 6 Menuepunkte + Icons: Burger wie auf dem Tablet */
+@media(min-width:901px) and (max-width:1279px){
   .menu{display:none}
   .burger{display:grid;place-items:center}
   .brand img{height:52px!important}
