@@ -588,7 +588,8 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
     <a class="brand" href="#"><img src="img/logo.png" alt="The Vanilla"></a>
     <nav class="menu">
       <a href="produkte.html">Shop <svg class="cap" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
-      <a href="#">Vanillewissen</a>
+      <a href="#">Märkte &amp; Weihnachtsmärkte</a>
+      <a href="#">Degustationsmenü</a>
       <a href="rezepte.html">Rezepte</a>
       <a href="ueber-uns.html">Über uns</a>
       <a href="#gift">Geschenke</a>
@@ -669,7 +670,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
     <div class="film-txt film-left" data-th="0.10">
       <div class="film-stat serif">2,63&thinsp;<span>%</span></div>
       <div class="film-stat-2 serif">Vanillin</div>
-      <p>Sensationeller Vanillin-Gehalt: der höchste je gemessene Wert (Stand 2022).</p>
+      <p>Sensationeller Vanillin-Gehalt: der höchste je in der Schweiz gemessene Wert (Stand 2022).</p>
     </div>
     <div class="film-txt film-right" data-th="0.42">
       <h2 class="serif">Die beste<br>Vanille<br>der Schweiz</h2>
@@ -714,6 +715,10 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
       <div class="ccrit">Vanillin-Gehalt</div>
       <div class="cell yes col-tv"><svg class="ic ic-yes" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><small>bis 2,63 %</small></div>
       <div class="cell no col-other"><svg class="ic ic-no" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg><small>~1,4 %</small></div>
+
+      <div class="ccrit">Feuchtigkeitsgehalt</div>
+      <div class="cell yes col-tv"><svg class="ic ic-yes" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><small>30–35 %</small></div>
+      <div class="cell no col-other"><svg class="ic ic-no" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg><small>eher trocken</small></div>
 
       <div class="ccrit">Aroma</div>
       <div class="cell yes col-tv"><svg class="ic ic-yes" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><small>natürlich &amp; 100 % echt</small></div>
@@ -780,7 +785,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
       </details>
       <details class="faq-item">
         <summary>Was bedeutet der Vanillin-Gehalt von 2,63 %?<span class="faq-ico"></span></summary>
-        <div class="faq-a">Vanillin ist der wichtigste Aromastoff der Vanille. 2,63 % ist der höchste je bei uns gemessene Wert — deutlich über dem Branchenschnitt von rund 1,4 %. Kurz gesagt: intensiveres Aroma, weniger Schote pro Rezept nötig.</div>
+        <div class="faq-a">Vanillin ist der wichtigste Aromastoff der Vanille. 2,63 % ist der höchste je in der Schweiz gemessene Wert — deutlich über dem Branchenschnitt von rund 1,4 %. Kurz gesagt: intensiveres Aroma, weniger Schote pro Rezept nötig.</div>
       </details>
       <details class="faq-item">
         <summary>Wie verwende ich Vanillepaste und -pulver?<span class="faq-ico"></span></summary>
@@ -825,7 +830,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
         </div>
       </div>
       <div class="f-col"><h4>Shop</h4><ul><li><a href="produkte.html#schoten">Vanilleschoten</a></li><li><a href="produkte.html#glas">Vanillepaste</a></li><li><a href="produkte.html#pulver">Vanillepulver</a></li><li><a href="produkte.html#salz">Vanille-Salz</a></li><li><a href="geschenkset.html">Geschenksets</a></li></ul></div>
-      <div class="f-col"><h4>Manufaktur</h4><ul><li><a href="ueber-uns.html">Über uns</a></li><li><a href="#">Qualität</a></li><li><a href="#">Vanillewissen</a></li><li><a href="rezepte.html">Rezepte</a></li></ul></div>
+      <div class="f-col"><h4>Manufaktur</h4><ul><li><a href="ueber-uns.html">Über uns</a></li><li><a href="#">Qualität</a></li><li><a href="#">Märkte &amp; Weihnachtsmärkte</a></li><li><a href="#">Degustationsmenü</a></li><li><a href="rezepte.html">Rezepte</a></li></ul></div>
       <div class="f-col"><h4>Service</h4><ul><li><a href="#">Kontakt</a></li><li><a href="#">Versand</a></li><li><a href="#">Impressum</a></li><li><a href="#">AGB</a></li></ul></div>
     </div>
     <div class="f-bottom">
@@ -890,7 +895,7 @@ const film=document.getElementById('vanillin');
 const canvas=document.getElementById('filmCanvas');
 if(film&&canvas){
   const ctx=canvas.getContext('2d');
-  const FRAMES=151, PAD=3, BASE='media/seq/f';
+  const FRAMES=151, PAD=3, BASE='media/seq2/f';
   const imgs=new Array(FRAMES);
   let curIdx=-1, targetP=0, rafPending=false;
   for(let i=0;i<FRAMES;i++){
