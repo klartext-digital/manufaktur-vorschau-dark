@@ -228,6 +228,7 @@ main .btn-dark:hover{color:#140F05}
 @media(min-width:1280px) and (max-width:1439px){.brand img{height:54px!important}.menu{font-size:.96rem}.nav-ico{gap:18px}}
 /* darunter reicht der Platz nicht fuer Logo + 6 Menuepunkte + Icons: Burger wie auf dem Tablet */
 @media(min-width:901px) and (max-width:1279px){
+  .nav{display:flex}
   .menu{display:none}
   .burger{display:grid;place-items:center}
   .brand img{height:52px!important}
