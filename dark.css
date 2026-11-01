@@ -312,3 +312,11 @@ main .btn-dark:hover{color:#140F05}
 .price .save.pact{margin-left:0;font-size:.72rem;padding:7px 14px;align-self:center;top:0}
 /* Vanillin-Satz ist mit "in der Schweiz" laenger: keine einzelne Restzeile */
 .film-left p{max-width:34ch;text-wrap:pretty}
+
+/* ---------- Kopfbild randlos: volle Breite, oben direkt an der Linie unter dem Menue, volle Bildschirmhoehe ---------- */
+.hero{padding-top:0}
+.hero>.wrap{max-width:none;padding-inline:0}
+.hero-card{border-radius:0;clip-path:none!important;-webkit-clip-path:none!important;min-height:calc(100svh - var(--topbar-h) - var(--head-h))}
+.hero-card img.bg{border-radius:0}
+/* Text bleibt an derselben Stelle wie vorher in der Box */
+@media(min-width:641px){.hero-copy{padding-left:calc(var(--pad-hero) + var(--hero-in));max-width:calc(476px + var(--pad-hero) + 2*var(--hero-in))}}
