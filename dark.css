@@ -433,3 +433,5 @@ main .btn-dark:hover{color:#140F05}
 .gal .ph:nth-child(3),.gal .ph:nth-child(4),.gal .ph:nth-child(5){aspect-ratio:4/5}
 @media(max-width:820px){.gal .ph:nth-child(n){aspect-ratio:4/5}.gal .ph:nth-child(1){aspect-ratio:7/5}}
 @media(max-width:820px){.gal{margin-inline:calc(var(--pad-hero) - var(--pad))}.gal .ph figcaption{padding-inline:calc(var(--pad) - var(--pad-hero))}}
+
+.addr a,.dg-mail{color:var(--gold-bright);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}

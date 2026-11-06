@@ -704,7 +704,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 .src{margin-top:clamp(40px,5vw,70px);font-size:.74rem;color:var(--ink-soft);opacity:.75;line-height:1.6}
 
 </style>
-<link rel="stylesheet" href="dark.css?v=27">
+<link rel="stylesheet" href="dark.css?v=28">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#0A0907">
 </head>
@@ -831,6 +831,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
       <div class="reveal">
         <h2>Euren Abend <span style="color:var(--gold-bright)">anfragen</span></h2>
         <p>Sagt uns, wann ihr feiern möchtet und wie viele ihr seid. Stephan meldet sich persönlich und bespricht mit euch Termin, Ort und Preis.</p>
+        <p>Oder schreibt direkt an <a class="dg-mail" href="mailto:stephan@the-vanilla.ch">stephan@the-vanilla.ch</a></p>
       </div>
       <form class="dg-form reveal" id="dgForm" novalidate>
         <div class="dg-feld"><label for="f-name">Name <span class="pf" aria-hidden="true">*</span></label><input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name"><p class="dg-fehler" id="e-name" data-msg="Bitte gib deinen Namen an." hidden></p></div>
@@ -842,7 +843,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
         <div class="dg-feld breit"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht"></textarea></div>
         <p class="dg-pf-legende"><span class="pf" aria-hidden="true">*</span> Pflichtfeld</p>
         <button class="btn btn-gold" type="submit"><span>Abend anfragen</span> <span class="arrow">→</span></button>
-        <p class="dg-form-hinweis" id="dgHinweis" role="status" hidden></p>
+        <p class="dg-form-hinweis" id="dgHinweis" role="status" hidden></p><a id="dgMail" hidden></a>
       </form>
     </div>
   </div>
@@ -856,7 +857,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
       <div class="f-brand">
         <img src="img/logo.png" alt="The Vanilla">
         <span class="f-tag">The Fine Art of Vanilla</span>
-        <p class="addr">The Vanilla GmbH Manufaktur<br>Lättenstrasse 27 · CH-8952 Schlieren / Zürich</p>
+        <p class="addr">The Vanilla GmbH Manufaktur<br>Lättenstrasse 27 · CH-8952 Schlieren / Zürich<br><a href="mailto:stephan@the-vanilla.ch">stephan@the-vanilla.ch</a></p>
         <div class="f-social">
           <a href="https://www.instagram.com/the_vanilla_gmbh_manufaktur/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.8 6a1.1 1.1 0 1 1-1.1 1.1A1.1 1.1 0 0 1 17.8 6z"/></svg></a>
           <a href="https://www.facebook.com/The-Vanilla-Manufaktur-103141285698840" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 9h2.6l.4-3H14V4.4c0-.9.3-1.5 1.6-1.5h1.5V.3C16.6.2 15.7 0 14.7 0 12.3 0 11 1.4 11 3.9V6H8.5v3H11v9h3V9z"/></svg></a>
@@ -864,7 +865,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
       </div>
       <div class="f-col"><h4>Shop</h4><ul><li><a href="produkte.html#schoten">Vanilleschoten</a></li><li><a href="produkte.html#glas">Vanillepaste</a></li><li><a href="produkte.html#pulver">Vanillepulver</a></li><li><a href="produkte.html#salz">Vanille-Salz</a></li><li><a href="geschenkset.html">Geschenksets</a></li></ul></div>
       <div class="f-col"><h4>Manufaktur</h4><ul><li><a href="ueber-uns.html">Über uns</a></li><li><a href="#">Qualität</a></li><li><a href="weihnachtsmaerkte.html">Weihnachtsmärkte</a></li><li><a href="degustationsmenue.html">Degustationsmenü</a></li><li><a href="rezepte.html">Rezepte</a></li></ul></div>
-      <div class="f-col"><h4>Service</h4><ul><li><a href="#">Kontakt</a></li><li><a href="#">Versand</a></li><li><a href="#">Impressum</a></li><li><a href="#">AGB</a></li></ul></div>
+      <div class="f-col"><h4>Service</h4><ul><li><a href="mailto:stephan@the-vanilla.ch">Kontakt</a></li><li><a href="#">Versand</a></li><li><a href="#">Impressum</a></li><li><a href="#">AGB</a></li></ul></div>
     </div>
     <div class="f-bottom">
       <span>© 2026 The Vanilla GmbH · Alle Rechte vorbehalten.</span>
@@ -894,7 +895,10 @@ dgPF.forEach(el=>{el.addEventListener('blur',()=>{if(el.value.trim()!==''||el.ha
   el.addEventListener(el.tagName==='SELECT'?'change':'input',()=>{if(el.hasAttribute('aria-invalid'))dgPruefe(el)})});
 dgF.addEventListener('submit',e=>{e.preventDefault();const falsch=dgPF.filter(el=>!dgPruefe(el));
   if(falsch.length){dgH.hidden=true;falsch[0].focus();return}
-  dgH.hidden=false;dgH.textContent='Vorschau: Das Formular ist noch nicht angeschlossen, die Anfrage wird nicht versendet.'});
+  const w=n=>dgF.elements[n].value.trim();
+  const zeilen=[['Name',w('name')],['E-Mail',w('email')],['Telefon',w('telefon')],['Personen',w('personen')],['Wunschtermin',w('termin')],['Anlass',w('anlass')],['Nachricht',w('nachricht')]].filter(z=>z[1]).map(z=>z[0]+': '+z[1]).join('\n');
+  const l=document.getElementById('dgMail');l.href='mailto:stephan@the-vanilla.ch?subject='+encodeURIComponent('Anfrage Degustationsmenü: '+w('name'))+'&body='+encodeURIComponent(zeilen);l.click();
+  dgH.hidden=false;dgH.textContent='Euer E-Mail-Programm öffnet sich mit der fertigen Anfrage. Bitte dort noch absenden.'});
 </script>
 </body>
 </html>
