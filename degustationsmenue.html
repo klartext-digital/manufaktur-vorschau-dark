@@ -704,7 +704,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 .src{margin-top:clamp(40px,5vw,70px);font-size:.74rem;color:var(--ink-soft);opacity:.75;line-height:1.6}
 
 </style>
-<link rel="stylesheet" href="dark.css?v=24">
+<link rel="stylesheet" href="dark.css?v=25">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#0A0907">
 </head>
@@ -833,13 +833,14 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
         <p>Sagt uns, wann ihr feiern möchtet und wie viele ihr seid. Stephan meldet sich persönlich und bespricht mit euch Termin, Ort und Preis.</p>
       </div>
       <form class="dg-form reveal" id="dgForm" novalidate>
-        <div class="dg-feld"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
-        <div class="dg-feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
-        <div class="dg-feld"><label for="f-tel">Telefon (optional)</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel"></div>
-        <div class="dg-feld"><label for="f-pers">Anzahl Personen</label><select id="f-pers" name="personen" required><option value="">Bitte wählen</option><option>4 bis 6 Personen</option><option>7 bis 12 Personen</option><option>13 bis 20 Personen</option></select></div>
+        <div class="dg-feld"><label for="f-name">Name <span class="pf" aria-hidden="true">*</span></label><input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name"><p class="dg-fehler" id="e-name" data-msg="Bitte gib deinen Namen an." hidden></p></div>
+        <div class="dg-feld"><label for="f-mail">E-Mail <span class="pf" aria-hidden="true">*</span></label><input id="f-mail" name="email" type="email" autocomplete="email" required aria-describedby="e-mail"><p class="dg-fehler" id="e-mail" data-msg="Bitte gib eine gültige E-Mail-Adresse an." hidden></p></div>
+        <div class="dg-feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel"></div>
+        <div class="dg-feld"><label for="f-pers">Anzahl Personen <span class="pf" aria-hidden="true">*</span></label><select id="f-pers" name="personen" required aria-describedby="e-pers"><option value="">Bitte wählen</option><option>4 bis 6 Personen</option><option>7 bis 12 Personen</option><option>13 bis 20 Personen</option></select><p class="dg-fehler" id="e-pers" data-msg="Bitte wähle die Anzahl Personen." hidden></p></div>
         <div class="dg-feld"><label for="f-datum">Wunschtermin</label><input id="f-datum" name="termin" type="date"></div>
         <div class="dg-feld"><label for="f-anlass">Anlass</label><select id="f-anlass" name="anlass"><option value="">Bitte wählen</option><option>Team-Event</option><option>Freundesabend</option><option>Geburtstag</option><option>Kundenanlass</option><option>Familienfeier</option><option>Anderer Anlass</option></select></div>
-        <div class="dg-feld breit"><label for="f-text">Nachricht (optional)</label><textarea id="f-text" name="nachricht"></textarea></div>
+        <div class="dg-feld breit"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht"></textarea></div>
+        <p class="dg-pf-legende"><span class="pf" aria-hidden="true">*</span> Pflichtfeld</p>
         <button class="btn btn-gold" type="submit"><span>Abend anfragen</span> <span class="arrow">→</span></button>
         <p class="dg-form-hinweis" id="dgHinweis" role="status" hidden></p>
       </form>
@@ -886,8 +887,14 @@ if(window.Lenis && !matchMedia('(prefers-reduced-motion: reduce)').matches){
 }
 
 const dgF=document.getElementById('dgForm'),dgH=document.getElementById('dgHinweis');
-dgF.addEventListener('submit',e=>{e.preventDefault();dgH.hidden=false;
-  dgH.textContent=dgF.checkValidity()?'Vorschau: Das Formular ist noch nicht angeschlossen, die Anfrage wird nicht versendet.':'Bitte Name, eine gültige E-Mail und die Anzahl Personen angeben.';});
+const dgPF=[...dgF.querySelectorAll('[required]')];
+function dgPruefe(el){const ok=el.value.trim()!==''&&el.checkValidity(),e=document.getElementById(el.getAttribute('aria-describedby'));
+  el.toggleAttribute('aria-invalid',!ok);e.hidden=ok;e.textContent=ok?'':e.dataset.msg;return ok}
+dgPF.forEach(el=>{el.addEventListener('blur',()=>{if(el.value.trim()!==''||el.hasAttribute('aria-invalid'))dgPruefe(el)});
+  el.addEventListener(el.tagName==='SELECT'?'change':'input',()=>{if(el.hasAttribute('aria-invalid'))dgPruefe(el)})});
+dgF.addEventListener('submit',e=>{e.preventDefault();const falsch=dgPF.filter(el=>!dgPruefe(el));
+  if(falsch.length){dgH.hidden=true;falsch[0].focus();return}
+  dgH.hidden=false;dgH.textContent='Vorschau: Das Formular ist noch nicht angeschlossen, die Anfrage wird nicht versendet.'});
 </script>
 </body>
 </html>
