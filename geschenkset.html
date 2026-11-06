@@ -255,7 +255,7 @@ footer a{color:rgba(255,255,255,.72);font-size:.92rem}footer a:hover{color:#fff}
 @media(max-width:340px){.brand img{height:32px}}
 .bundle .tag.tag-firm{font-size:.8rem;padding:4px 12px;top:-12px;letter-spacing:.02em}
 </style>
-<link rel="stylesheet" href="dark.css?v=31">
+<link rel="stylesheet" href="dark.css?v=32">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#0A0907">
 </head>
@@ -299,7 +299,7 @@ footer a{color:rgba(255,255,255,.72);font-size:.92rem}footer a:hover{color:#fff}
     <p class="subtitle">3 Mini-Gläser + 2 Vanilleschoten «Extra» in der Tragtasche · ideal zum Verschenken</p>
 
     <div class="hr"></div>
-    <div class="price"><span class="now" id="price">CHF 32.50</span></div>
+    <div class="price"><span class="now" id="price">CHF 32.50</span><span class="was" id="pwas" hidden></span><span class="save" id="psave" hidden></span></div>
 
     <p class="lede">Möchten Sie etwas nicht Alltägliches verschenken? Dieses Vanille-Sortiment ist das auffällige, herzhaft duftende Geschenk zum Mitbringen – für Mitarbeitende, Kundinnen und Geschäftspartner auch in grösseren Mengen mit gestaffeltem Rabatt.</p>
 
@@ -313,39 +313,16 @@ footer a{color:rgba(255,255,255,.72);font-size:.92rem}footer a:hover{color:#fff}
     <div class="stock" style="color:var(--green)"><span class="dot" style="background:var(--green)"></span> Verfügbar</div>
 
     <div class="bundles" id="bundles">
-      <div class="bundle-lbl">Menge wählen – Mengenrabatt</div>
-      <label class="bundle sel" data-price="32.50">
-        <span class="radio"></span><span class="bimg"><img class="cov" src="img/produkte/geschenk-1.jpg" alt=""></span>
-        <span class="bt"><b>1 Geschenkpackung</b><span>Einzeln · zum Verschenken</span></span>
-        <span class="bp"><b>CHF 32.50</b></span>
-      </label>
-      <label class="bundle" data-price="552.50">
-        <span class="tag tag-firm">−15%</span>
-        <span class="radio"></span><span class="bimg"><img class="cov" src="img/produkte/geschenk-1.jpg" alt=""></span>
-        <span class="bt"><b>20 Packungen</b><span>CHF 27.63 pro Packung</span></span>
-        <span class="bp"><b>CHF 552.50</b></span>
-      </label>
-      <label class="bundle" data-price="1300.00">
-        <span class="tag tag-firm">−20%</span>
-        <span class="radio"></span><span class="bimg"><img class="cov" src="img/produkte/geschenk-1.jpg" alt=""></span>
-        <span class="bt"><b>50 Packungen</b><span>CHF 26.00 pro Packung</span></span>
-        <span class="bp"><b>CHF 1'300</b></span>
-      </label>
-      <label class="bundle" data-price="2437.50">
-        <span class="tag tag-firm">−25%</span>
-        <span class="radio"></span><span class="bimg"><img class="cov" src="img/produkte/geschenk-1.jpg" alt=""></span>
-        <span class="bt"><b>100 Packungen</b><span>CHF 24.38 pro Packung</span></span>
-        <span class="bp"><b>CHF 2'437.50</b></span>
-      </label>
-      <label class="bundle" data-price="6825.00">
-        <span class="tag tag-firm">−30%</span>
-        <span class="radio"></span><span class="bimg"><img class="cov" src="img/produkte/geschenk-1.jpg" alt=""></span>
-        <span class="bt"><b>300 Packungen</b><span>CHF 22.75 pro Packung</span></span>
-        <span class="bp"><b>CHF 6'825</b></span>
-      </label>
+      <div class="bundle-lbl">Mengenrabatt, wird automatisch berechnet</div>
+      <label class="bundle sel" data-q="1" data-d="0"><span class="radio"></span><span class="bimg"><img class="cov" src="img/produkte/geschenk-1.jpg" alt=""></span><span class="bt"><b>1 Geschenkpackung</b><span>Einzeln, zum Verschenken</span></span><span class="bp"><b>CHF 32.50</b><span class="pro">pro Packung</span></span></label>
+      <label class="bundle" data-q="20" data-d="15"><span class="tag tag-firm">−15%</span><span class="radio"></span><span class="bimg"><img class="cov" src="img/produkte/geschenk-1.jpg" alt=""></span><span class="bt"><b>ab 20 Packungen</b><span>15 % Rabatt</span></span><span class="bp"><b>CHF 27.63</b><span class="pro">pro Packung</span></span></label>
+      <label class="bundle" data-q="50" data-d="20"><span class="tag tag-firm">−20%</span><span class="radio"></span><span class="bimg"><img class="cov" src="img/produkte/geschenk-1.jpg" alt=""></span><span class="bt"><b>ab 50 Packungen</b><span>20 % Rabatt</span></span><span class="bp"><b>CHF 26.00</b><span class="pro">pro Packung</span></span></label>
+      <label class="bundle" data-q="100" data-d="25"><span class="tag tag-firm">−25%</span><span class="radio"></span><span class="bimg"><img class="cov" src="img/produkte/geschenk-1.jpg" alt=""></span><span class="bt"><b>ab 100 Packungen</b><span>25 % Rabatt</span></span><span class="bp"><b>CHF 24.38</b><span class="pro">pro Packung</span></span></label>
+      <label class="bundle" data-q="300" data-d="30"><span class="tag tag-firm">−30%</span><span class="radio"></span><span class="bimg"><img class="cov" src="img/produkte/geschenk-1.jpg" alt=""></span><span class="bt"><b>ab 300 Packungen</b><span>30 % Rabatt</span></span><span class="bp"><b>CHF 22.75</b><span class="pro">pro Packung</span></span></label>
     </div>
 
-    <div class="buycta"><button class="btn btn-dark"><span>In den Warenkorb</span><span class="arrow">→</span></button></div>
+    <div class="buycta buycta-q"><div class="qty" id="qty"><button type="button" data-d="-1" aria-label="Menge verringern">−</button><input id="qtyN" inputmode="numeric" pattern="[0-9]*" value="1" aria-label="Menge"><button type="button" data-d="1" aria-label="Menge erhöhen">+</button></div><button class="btn btn-dark"><span>In den Warenkorb</span><span class="arrow">→</span></button></div>
+    <p class="qty-hint" id="qtyHint" role="status" hidden></p>
 
     <div class="pays"><img src="img/pay/visa.svg" alt="Visa"><img src="img/pay/mastercard.svg" alt="Mastercard"><img src="img/pay/amex.svg" alt="American Express"><img src="img/pay/twint.svg" alt="TWINT"><img src="img/pay/paypal.svg" alt="PayPal"><img src="img/pay/applepay.svg" alt="Apple Pay"></div>
     <div class="deliver">Bestellst du in den nächsten <b id="ctd">10 Std 50 Min</b>, versenden wir noch heute.</div>
@@ -454,11 +431,18 @@ document.getElementById('gthumbs').addEventListener('click',e=>{
 });
 // Mengen
 const price=document.getElementById('price');
-document.getElementById('bundles').addEventListener('click',e=>{
-  const l=e.target.closest('.bundle'); if(!l) return;
-  document.querySelectorAll('.bundle').forEach(x=>x.classList.remove('sel')); l.classList.add('sel');
-  price.textContent='CHF '+parseFloat(l.dataset.price).toLocaleString('de-CH',{minimumFractionDigits:2,maximumFractionDigits:2});
-});
+const chf=n=>'CHF '+n.toLocaleString('de-CH',{minimumFractionDigits:2,maximumFractionDigits:2});
+const qN=document.getElementById('qtyN'),P0=32.5,rows=[...document.querySelectorAll('#bundles .bundle')];
+function menge(){let n=parseInt(qN.value,10);if(!(n>=1))n=1;if(n>999)n=999;return n}
+function rechne(){const n=menge();qN.value=n;let t=rows[0];rows.forEach(r=>{if(n>=+r.dataset.q)t=r});const d=+t.dataset.d,tot=Math.round(P0*n*(100-d))/100;
+  rows.forEach(r=>r.classList.toggle('sel',r===t));document.getElementById('price').textContent=chf(tot);
+  const w=document.getElementById('pwas'),v=document.getElementById('psave');w.hidden=v.hidden=!d;if(d){w.textContent=chf(P0*n);v.textContent='−'+d+' %'}
+  const nx=rows.find(r=>n<+r.dataset.q&&+r.dataset.d>0),h=[];if(n>1)h.push(chf(tot/n)+' pro Packung'+(d?', '+d+' % Mengenrabatt berücksichtigt':''));if(nx)h.push('Ab '+nx.dataset.q+' Packungen '+nx.dataset.d+' % Rabatt');
+  const hi=document.getElementById('qtyHint');hi.hidden=!h.length;hi.textContent=h.join('. ')+(h.length?'.':'')}
+document.getElementById('qty').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;qN.value=menge()+(+b.dataset.d);rechne()});
+qN.addEventListener('change',rechne);
+document.getElementById('bundles').addEventListener('click',e=>{const l=e.target.closest('.bundle');if(!l)return;qN.value=l.dataset.q;rechne()});
+rechne();
 // countdown
 let t=10*3600+50*60;const ctd=document.getElementById('ctd');
 setInterval(()=>{t=Math.max(0,t-1);const h=Math.floor(t/3600),m=Math.floor(t%3600/60),s=t%60;ctd.textContent=h+' Std '+m+' Min '+String(s).padStart(2,'0')+' Sek';},1000);
