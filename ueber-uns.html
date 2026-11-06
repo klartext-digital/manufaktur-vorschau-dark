@@ -645,6 +645,16 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 .ab-photo{position:relative;border-radius:var(--r-xl);overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 90px -50px rgba(0,0,0,.95);outline:1px solid rgba(201,162,76,.2);outline-offset:-1px}
 .ab-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
 @media(max-width:900px){.ab-intro{grid-template-columns:1fr}.ab-photo{aspect-ratio:4/3}}
+/* Stephans eigener Text: lang, darum bleibt das Foto beim Lesen stehen */
+.ab-bio{align-items:start;row-gap:clamp(26px,3vw,44px)}
+.ab-bio>h2{grid-column:1/-1;margin:0}
+.ab-bio>h2 .g{display:block}
+.ab-bio p{text-wrap:pretty}
+.ab-bio .ab-lead{color:var(--ink);font-size:clamp(1.14rem,1.35vw,1.26rem);line-height:1.6;margin-bottom:1.3em}
+.ab-flag{font-size:1.15em;line-height:1;white-space:nowrap}
+.ab-bio .ab-slogan{font-family:Fraunces,serif;font-size:clamp(1.5rem,2.5vw,2.25rem);line-height:1.25;color:var(--gold-bright);margin:1.3em 0 0;max-width:none}
+@media(min-width:901px){.ab-bio .ab-photo{position:sticky;top:calc(var(--head-h) + 28px);max-height:calc(100vh - var(--head-h) - 56px)}}
+@media(max-width:900px){.ab-bio .ab-photo{order:-1}.ab-bio>h2{order:-2}}
 
 /* Weg / Timeline */
 .ab-sec h2{font-size:var(--title);line-height:1.05;margin:0}
@@ -777,12 +787,16 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 
 <section class="sec">
   <div class="wrap">
-    <div class="ab-intro">
+    <div class="ab-intro ab-bio">
+      <h2 class="reveal">Handwerk im Blut. <span class="g">Genuss im Herzen</span></h2>
       <div class="reveal">
-        <h2>Vom Kochherd zur <span class="g">eigenen Vanille.</span></h2>
-        <p>Stephan Stemminger ist gelernter Koch. Seine Kochlehre machte er im Artos Interlaken und schloss sie mit dem besten Abschluss im Kanton Bern ab. Knapp ein Jahr später machte er sich als Störkoch und mit einem Catering selbstständig und gewann parallel dazu mehrere Gold- und Silbermedaillen an Kocholympiaden, Weltmeisterschaften und an der ZAGG.</p>
-        <p>Über einen guten Freund kam er vor einigen Jahren intensiver mit Vanille in Kontakt. Die Faszination liess ihn nicht mehr los: 2021 gründete er in Schlieren die erste Vanillemanufaktur der Schweiz. Bis heute macht er fast alles selbst, vom Kontakt mit den Händlern über das Abfüllen bis zum Etikettieren.</p>
-        <p class="ab-quote">«Ich sah, wie viel Potenzial in Vanille steckt, und gründete 2021 die erste Vanillemanufaktur der Schweiz.»<small>Stephan Stemminger im Gastro Journal, Dezember 2022</small></p>
+        <p class="ab-lead">Ich bin Stephan Stemminger, die meisten nennen mich «Stemmi» oder eben «de Vanille-Ma». Mein Weg führte mich vom Dach über die Baustelle bis in die Küche und zur Vanilleschote: Gelernt habe ich drei Berufe; Bauspengler, Lüftungsmonteur und Koch. Was mich dabei immer antreibt? Die Freude, mit meinen Händen etwas Besonderes zu erschaffen.</p>
+        <p>Ein halbes Jahr nach meiner Ausbildung im 2007 als Koch machte ich mich mit «MyStarkoch» als Privat- und Störkoch selbstständig. Dann rutschte ich nebenbei für sieben Jahre ins Kochkunst-Regionalteam Luzern, Cercle des Chefs de Cuisine Lucerne und wir konnten Grosse Gold &amp; Silber &amp; Bronze Erfolge feiern.</p>
+        <p>Im 2016 schaffte ich es bis an die Spitze, in die Schweizer Koch-Nationalmannschaft und brachte mich auch auf die internationale Wettkampfbühne, mit Gold an Koch-Weltmeisterschaften und der Koch-Olympiade. Im 2016 kochten wir die Schweiz auf den 3. Platz von 52 Nationen.</p>
+        <p>2019 packte mich die Faszination für echte Vanille. Daraus entstand 2021 die «The Vanilla GmbH Manufaktur» in Schlieren, die erste Vanille-Manufaktur der Schweiz <span class="ab-flag">🇨🇭</span></p>
+        <p>Hier verwandle ich echte Vanille in unverwechselbare Genusskreationen: von Hand geschaffen, mit Leidenschaft veredelt und bis ins Detail vollendet. 100 % Natur, ohne Alkohol und ohne künstliche Aromen oder irgendwelche Zusatzstoffe. Mein Anspruch: Vanillegenuss, in einer unvergleichbaren Kreation.</p>
+        <p>Und wenn ich gerade keine Vanille in den Händen halte? Dann kümmere ich mich als Hobbyimker um meine Bienen, bin auf dem Wasser oder sehr sportlich unterwegs. Als ehemaliger Marathonläufer und Radrennfahrer weiss ich: Leidenschaft bringt mich an den Start. Ausdauer bringt mich ans Ziel.</p>
+        <p class="ab-slogan">«Wetsch Vanille haa, lüüt am Stemmi a»</p>
       </div>
       <div class="ab-photo reveal"><img src="img/stephan-tisch-echt.jpg" style="object-position:50% 35%" alt="Stephan Stemminger prüft Vanilleschoten in der Manufaktur"></div>
     </div>
