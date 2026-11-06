@@ -704,7 +704,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 .src{margin-top:clamp(40px,5vw,70px);font-size:.74rem;color:var(--ink-soft);opacity:.75;line-height:1.6}
 
 </style>
-<link rel="stylesheet" href="dark.css?v=33">
+<link rel="stylesheet" href="dark.css?v=34">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#0A0907">
 </head>
@@ -741,7 +741,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
       <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
       <svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9C1 8.5 3 5 6.5 5 9 5 12 8 12 8s3-3 5.5-3C21 5 23 8.5 21.5 12 19 16.5 12 21 12 21z"/></svg>
       <span class="cart-dot"><svg class="ico" viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M6 6L5 2H2"/></svg><b>2</b></span>
-      <svg class="ico burger" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
     </div>
   </div>
 </header>
@@ -784,7 +784,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
         </ul>
         <a class="dg-link" href="ueber-uns.html">Mehr über Stephan</a>
       </div>
-      <div class="dg-stephan-foto reveal"><img src="img/abend/stephan-schuessel.jpg" alt="Stephan Stemminger richtet vor der The-Vanilla-Wand aus einer Metallschüssel an" loading="lazy" style="object-position:50% 8%"></div>
+      <div class="dg-stephan-foto dg-film reveal" id="dgFilm"><img src="img/abend/stephan-schuessel.jpg" alt="Stephan Stemminger richtet vor der The-Vanilla-Wand aus einer Metallschüssel an" loading="lazy" style="object-position:50% 8%"><video muted loop playsinline preload="none" poster="media/abend-poster.jpg" aria-label="Stephan beim Anrichten an einem Abend in der Manufaktur"><source src="media/abend-20s.mp4" type="video/mp4"></video><span class="dg-film-play" aria-hidden="true"></span></div>
     </div>
   </div>
 </section>
@@ -830,15 +830,14 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
     <!-- Platz fuellen: Foto = <figure class="st st-foto"><img src="img/stimmen/name.jpg" alt="Gaeste mit Stephan"></figure>
          Kommentar = <blockquote class="st st-text"><p>Text</p><cite>Name, Anlass</cite></blockquote> -->
     <div class="st-wand reveal">
-      <figure class="st st-platz st-hoch"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.6"/></svg><b>Selfie folgt</b><span>Gäste und Stephan am Abend</span></figure>
+      <figure class="st st-foto"><img src="img/stimmen/kartons.jpg" alt="Stephan Stemminger mit einem Gast und einem Vakuumbeutel Vanilleschoten" loading="lazy"></figure>
       <blockquote class="st st-text"><p>Danke nochmal für diesen sehr spannenden Einblick. Ich hab den Abend sehr genossen. Die Besichtigung bei «The Vanilla» war eine wirklich spannende Exkursion in die faszinierende Welt der Vanille. Besonders begeistert hat mich die Leidenschaft, mit der Stephan sein Produkt präsentiert und lebt. Man spürt sofort, wie viel Herzblut, Wissen und Begeisterung darin steckt. Eine geschmacklich äusserst interessante Entdeckung und ein rundum inspirierender Besuch!</p><cite>Ruben</cite></blockquote>
-      <figure class="st st-platz st-quer"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.6"/></svg><b>Selfie folgt</b><span>Gäste und Stephan am Abend</span></figure>
+      <figure class="st st-foto"><img src="img/stimmen/gast-tuete.jpg" alt="Stephan Stemminger mit einem Gast und der The-Vanilla-Tragtasche" loading="lazy"></figure>
       <blockquote class="st st-text"><p>Vanilla at its best! Ein exquisiter Abend im «The Vanilla» bei Stephan Stemminger in Schlieren. Viel über Vanille, Produktion und deren Verwendung in der Küche gelernt. Ein hervorragendes und von Stephan speziell kreiertes 4-Gang Menu zum Thema im passendem Ambiente genossen. Prädikat: Unbedingt empfehlenswert! Vielen Dank, lieber Stephan, für den tollen und unvergesslichen Abend.</p><cite>Markus</cite></blockquote>
-      <figure class="st st-platz st-hoch"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.6"/></svg><b>Selfie folgt</b><span>Gäste und Stephan am Abend</span></figure>
+      <figure class="st st-foto"><img src="img/stimmen/gast-brille.jpg" alt="Stephan Stemminger mit einem Gast vor dem Logo an der Wand" loading="lazy"></figure>
       <div class="st st-platz st-kurz"><i aria-hidden="true">«</i><b>Kommentar folgt</b><span>Stimme eines Gastes vom Abend</span></div>
-      <figure class="st st-platz st-quer"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.6"/></svg><b>Selfie folgt</b><span>Gäste und Stephan am Abend</span></figure>
+      <figure class="st st-foto"><img src="img/stimmen/gast-jacke.jpg" alt="Stephan Stemminger Arm in Arm mit einem Gast vor dem Logo" loading="lazy"></figure>
       <div class="st st-platz st-kurz"><i aria-hidden="true">«</i><b>Kommentar folgt</b><span>Stimme eines Gastes vom Abend</span></div>
-      <figure class="st st-platz st-hoch"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.6"/></svg><b>Selfie folgt</b><span>Gäste und Stephan am Abend</span></figure>
     </div>
   </div>
 </section>
@@ -905,6 +904,10 @@ if(window.Lenis && !matchMedia('(prefers-reduced-motion: reduce)').matches){
   (function lraf(t){lenis.raf(t);requestAnimationFrame(lraf)})(0);
 }
 
+(function(){const f=document.getElementById('dgFilm'),v=f.querySelector('video');const an=()=>{f.classList.add('laeuft');const p=v.play();if(p&&p.catch)p.catch(()=>{})},aus=()=>{f.classList.remove('laeuft');v.pause()};
+  if(matchMedia('(hover:hover)').matches){f.addEventListener('pointerenter',an);f.addEventListener('pointerleave',aus)}
+  else if(!matchMedia('(prefers-reduced-motion: reduce)').matches){new IntersectionObserver(e=>e.forEach(x=>{x.isIntersecting?an():aus()}),{threshold:.6}).observe(f)}
+  else f.addEventListener('click',()=>f.classList.contains('laeuft')?aus():an())})();
 const dgF=document.getElementById('dgForm'),dgH=document.getElementById('dgHinweis');
 const dgPF=[...dgF.querySelectorAll('[required]')];
 function dgPruefe(el){const ok=el.value.trim()!==''&&el.checkValidity(),e=document.getElementById(el.getAttribute('aria-describedby'));
@@ -918,5 +921,6 @@ dgF.addEventListener('submit',e=>{e.preventDefault();const falsch=dgPF.filter(el
   const l=document.getElementById('dgMail');l.href='mailto:stephan@the-vanilla.ch?subject='+encodeURIComponent('Anfrage Degustationsmenü: '+w('name'))+'&body='+encodeURIComponent(zeilen);l.click();
   dgH.hidden=false;dgH.textContent='Euer E-Mail-Programm öffnet sich mit der fertigen Anfrage. Bitte dort noch absenden.'});
 </script>
+<script src="nav.js"></script>
 </body>
 </html>

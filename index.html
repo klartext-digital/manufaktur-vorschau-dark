@@ -560,7 +560,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 .cat-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 50%;opacity:0;transition:opacity .45s ease;pointer-events:none}
 .cat:hover .cat-vid{opacity:1}
 </style>
-<link rel="stylesheet" href="dark.css?v=33">
+<link rel="stylesheet" href="dark.css?v=34">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#0A0907">
 </head>
@@ -597,7 +597,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
       <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
       <svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9C1 8.5 3 5 6.5 5 9 5 12 8 12 8s3-3 5.5-3C21 5 23 8.5 21.5 12 19 16.5 12 21 12 21z"/></svg>
       <span class="cart-dot"><svg class="ico" viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M6 6L5 2H2"/></svg><b>2</b></span>
-      <svg class="ico burger" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
     </div>
   </div>
 </header>
@@ -841,7 +841,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 const products=[
  {n:"Vanillepaste im Glas",note:"Ohne Alkohol · auch für Kinder",link:"produkt.html?p=vanillepaste",r:"",c:"",p:"7.00",pre:"ab ",img:"p2/paste-1.jpg",vid:"paste-quer-w.mp4",vpos:"55% 50%",new:1},
  {n:"Gourmet Vanillepulver",note:"100 % rein · Tahitensis & Planifolia",link:"produkt.html?p=vanillepulver",r:"",c:"",p:"15.00",pre:"ab ",img:"p2/pulver-1.jpg",alt:"produkte/pulver-nah.jpg",new:1},
- {n:"Vanilleschoten «Extra» im Reagenzglas",note:"21–23 cm · 2 Stück",link:"produkt.html?p=vanilleschoten-extra-21-23cm-im-reagenzglas",r:"",c:"",p:"14.00",pre:"",img:"p2/schoten-1.jpg",alt:"echt/stephan-schoten-duft-v3.jpg",new:0},
+ {n:"Vanilleschoten «Extra» im Reagenzglas",note:"21–23 cm · 2 Stück",link:"produkt.html?p=vanilleschoten-extra-21-23cm-im-reagenzglas",r:"",c:"",p:"14.00",pre:"",img:"p2/schoten-1.jpg",alt:"echt/stephan-schoten-duft-v4.jpg",new:0},
  {n:"Vanille-Salz fein",note:"Meersalz mit 5,4 % Vanille",link:"produkt.html?p=vanille-salz-feine-kornung",r:"",c:"",p:"9.50",pre:"ab ",img:"p2/salz-fein-1.jpg",alt:"echt/salz-fein-stephan.jpg",new:0},
  {n:"Geschenkpackung",note:"3 Mini-Gläser + 2 Vanilleschoten",link:"geschenkset.html",r:"",c:"",p:"32.50",pre:"",img:"produkte/geschenk-1.jpg",new:1}
 ];
@@ -891,7 +891,7 @@ const film=document.getElementById('vanillin');
 const canvas=document.getElementById('filmCanvas');
 if(film&&canvas){
   const ctx=canvas.getContext('2d');
-  const FRAMES=151, PAD=3, BASE='media/seq2/f';
+  const FRAMES=151, PAD=3, BASE='media/seq3/f';
   const imgs=new Array(FRAMES);
   let curIdx=-1, targetP=0, rafPending=false;
   for(let i=0;i<FRAMES;i++){
@@ -992,5 +992,6 @@ if(window.Lenis && !matchMedia('(prefers-reduced-motion: reduce)').matches){
   });
 }
 </script>
+<script src="nav.js"></script>
 </body>
 </html>

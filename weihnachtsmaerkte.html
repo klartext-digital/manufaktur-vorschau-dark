@@ -704,7 +704,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 .src{margin-top:clamp(40px,5vw,70px);font-size:.74rem;color:var(--ink-soft);opacity:.75;line-height:1.6}
 
 </style>
-<link rel="stylesheet" href="dark.css?v=33">
+<link rel="stylesheet" href="dark.css?v=34">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#0A0907">
 </head>
@@ -741,7 +741,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
       <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
       <svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9C1 8.5 3 5 6.5 5 9 5 12 8 12 8s3-3 5.5-3C21 5 23 8.5 21.5 12 19 16.5 12 21 12 21z"/></svg>
       <span class="cart-dot"><svg class="ico" viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M6 6L5 2H2"/></svg><b>2</b></span>
-      <svg class="ico burger" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
     </div>
   </div>
 </header>
@@ -822,5 +822,6 @@ if(window.Lenis && !matchMedia('(prefers-reduced-motion: reduce)').matches){
   [...l.children].forEach(r=>{if(new Date(r.dataset.ende+'T23:59:59')<h){a.appendChild(r);v.hidden=false}});
   const n=l.firstElementChild;if(n){n.querySelector('.wm-ort').insertAdjacentHTML('beforeend','<span class="wm-naechster">Als Nächstes</span>')}})();
 </script>
+<script src="nav.js"></script>
 </body>
 </html>
