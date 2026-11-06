@@ -449,3 +449,11 @@ main .btn-dark:hover{color:#140F05}
 @media(min-width:901px){.dg-rund-text{position:sticky;top:calc(var(--head-h) + 28px)}}
 @media(max-width:900px){.dg-rund{grid-template-columns:minmax(0,1fr)}.dg-rund-text{order:-1}}
 @media(max-width:480px){.dg-rund-bilder{grid-template-columns:minmax(0,1fr)}.dg-rund-bilder figure:nth-child(even){margin-top:0}}
+
+/* Set auf "Kein Markt in eurer Naehe": Produkt gross im Bild */
+.wm-mehr-bild{aspect-ratio:5/4}
+.wm-mehr-bild img{object-position:60% 32%}
+/* Shop-Band Firmengeschenke: Set mittig, ganz sichtbar, nicht am unteren Rand */
+.pl-cta .pl-cta-vis{margin:0 0 0 auto;padding:0;align-self:center;display:block;width:clamp(210px,21vw,310px)}
+.pl-cta .pl-cta-vis img{-webkit-mask-image:none;mask-image:none}
+@media(max-width:860px){.pl-cta .pl-cta-vis{margin:0 auto 6px;width:min(240px,62vw)}}
