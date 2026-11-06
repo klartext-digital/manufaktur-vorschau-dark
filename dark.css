@@ -418,4 +418,4 @@ main .btn-dark:hover{color:#140F05}
 
 /* lange Woerter in schmalen Spalten trennen statt ueberlaufen */
 .indo-head h2{hyphens:auto}
-@media(max-width:400px){main h1,main h2{hyphens:auto;overflow-wrap:anywhere}}
+@media(max-width:340px){main h1,main h2{hyphens:auto;overflow-wrap:anywhere}}
