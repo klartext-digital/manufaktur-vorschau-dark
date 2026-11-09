@@ -560,7 +560,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 .cat-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 50%;opacity:0;transition:opacity .45s ease;pointer-events:none}
 .cat:hover .cat-vid{opacity:1}
 </style>
-<link rel="stylesheet" href="dark.css?v=37">
+<link rel="stylesheet" href="dark.css?v=38">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#0A0907">
 </head>
@@ -891,13 +891,13 @@ const film=document.getElementById('vanillin');
 const canvas=document.getElementById('filmCanvas');
 if(film&&canvas){
   const ctx=canvas.getContext('2d');
-  const FRAMES=151, PAD=3, BASE='media/seq4/f';
+  const FRAMES=142, PAD=3, BASE='media/seq5/f';
   const imgs=new Array(FRAMES);
   let curIdx=-1, targetP=0, rafPending=false;
   for(let i=0;i<FRAMES;i++){
     const im=new Image();
     im.onload=()=>{ if(i===0) draw(0); };
-    im.src=BASE+String(i+1).padStart(PAD,'0')+'.jpg';
+    im.src=BASE+String(i+1).padStart(PAD,'0')+'.webp';
     imgs[i]=im;
   }
   function resize(){
@@ -912,6 +912,7 @@ if(film&&canvas){
     if(idx===curIdx) return;
     const cw=canvas.width,ch=canvas.height,iw=im.naturalWidth,ih=im.naturalHeight;
     const s=Math.max(cw/iw,ch/ih), w=iw*s, h=ih*s;
+    ctx.imageSmoothingEnabled=true; ctx.imageSmoothingQuality='high';
     ctx.drawImage(im,(cw-w)/2,(ch-h)/2,w,h);
     curIdx=idx;
   }
