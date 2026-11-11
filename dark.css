@@ -501,3 +501,32 @@ body.mnav-offen{overflow:hidden}
   .brand img{height:38px!important;width:auto;object-fit:contain}
   .nav-ico{gap:9px;flex:none}
 }
+
+/*handy-shop 11.11.2026: Handy als Shop optimiert (schmale Raender, kompakter Kopf, Knoepfe einzeilig)*/
+@media (max-width:640px){
+  :root{--pad-hero:16px;--hero-in:8px;--head-h:62px}
+  header{height:var(--head-h);background:#0A0907}
+  header .wrap{padding-inline:14px}
+  .brand img{height:34px!important}
+  .nav-ico{gap:14px}
+  .pl-tools{position:static}
+  .hero-copy{padding-inline:24px}
+  .btn{white-space:nowrap}
+  .pcard .btn,.prods .btn{white-space:nowrap;font-size:.8rem;padding:.78em .5em}
+  .buy h1{overflow-wrap:normal;hyphens:manual;-webkit-hyphens:manual;font-size:clamp(1.9rem,8.6vw,2.4rem)}
+  .price .now{font-size:2.05rem}
+  .qual-media{height:220px;min-height:0}
+  .qual-media img{height:220px!important;width:auto!important;max-width:100%;object-fit:contain}
+  .film-left{top:calc(var(--head-h) + 5%)}
+  .film-bottom{left:0;right:0;width:auto;transform:translateY(24px)}
+  .film-bottom.in{transform:none}
+  .prods{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:4px var(--pad) 14px;margin-inline:calc(-1 * var(--pad));scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .prods::-webkit-scrollbar{display:none}
+  .prods>.pcard{flex:0 0 66%;scroll-snap-align:start;scroll-margin-left:var(--pad)}
+}
+@media (max-width:380px){
+  .btn{white-space:normal;max-width:100%}
+  .pcard .btn,.prods .btn{white-space:nowrap}
+  .pcard-body{padding-left:11px!important;padding-right:11px!important}
+  .pcard .btn{font-size:.72rem!important;padding:.75em .25em!important;letter-spacing:0}
+}
