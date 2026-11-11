@@ -530,3 +530,11 @@ body.mnav-offen{overflow:hidden}
   .pcard-body{padding-left:11px!important;padding-right:11px!important}
   .pcard .btn{font-size:.72rem!important;padding:.75em .25em!important;letter-spacing:0}
 }
+/*handy-lesbar: Texte im Vanillin-Film am Handy auf dunklen Baendern statt auf dem Bild*/
+@media (max-width:640px){
+  .film-scrim{background:linear-gradient(180deg,rgba(8,6,4,.92) 0%,rgba(8,6,4,.78) 30%,rgba(8,6,4,.15) 46%,rgba(8,6,4,.15) 54%,rgba(8,6,4,.8) 68%,rgba(8,6,4,.94) 100%)!important}
+  .film-txt{text-shadow:0 2px 18px rgba(0,0,0,.85),0 1px 3px rgba(0,0,0,.7)}
+  .film-left p{color:#F5EEDF}
+  .film-right{bottom:17%}
+  .film-bottom{bottom:5%}
+}
