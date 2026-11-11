@@ -102,3 +102,10 @@ html.tvp-offen{overflow:hidden}
 .rcardr .verified{color:var(--ink-2)}
 @media(max-width:900px){.rev-grid{grid-template-columns:minmax(0,1fr)!important}}
 @media(max-width:520px){.buycta-q .qty{order:0;flex:1 1 calc(100% - 68px)}.buycta-q .tvp-herz-pdp{order:1;width:56px;min-height:0}.buycta-q .btn{order:2;flex:1 1 100%!important}}
+.btn.tvp-aus,.btn.tvp-aus:hover{opacity:.55;cursor:not-allowed;transform:none;box-shadow:none}
+.bundle .bt b{overflow-wrap:break-word;hyphens:auto}
+@media(max-width:400px){.bundle{gap:10px;padding:12px}.bundle .bimg{width:40px;height:40px}.bundle .bp{flex-shrink:0}}
+#psizes .bundle .bt b{white-space:normal!important}
+@media(max-width:700px){.topbar .tb-mid,.topbar>.wrap{white-space:normal!important;overflow:visible!important;text-overflow:clip!important;line-height:1.35!important;text-align:center;height:auto!important}.topbar{height:auto!important;padding-block:6px!important}.topbar .wrap{height:auto!important}}
+@media(max-width:700px){.topbar .tb-sep{display:none}.topbar .tb-a,.topbar .tb-mid>a,.topbar>.wrap>a{display:block}.topbar .tb-mid,.topbar>.wrap{font-size:.74rem!important}}
+@media(max-width:700px){.topbar .wrap{padding-inline:12px!important}}
