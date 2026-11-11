@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Geschenkpackung — The Vanilla</title>
+<title>Geschenkpackung | The Vanilla</title>
 <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +57,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,253,249,.9);backdro
 /* PDP layout */
 .pdp{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(28px,4vw,68px);padding-block:26px clamp(52px,7vw,96px);align-items:start;max-width:1380px;margin-inline:auto}
 main.pdp{padding-inline:var(--pad-hero)}
-/* gallery — bright studio stage */
+/* gallery, bright studio stage */
 .gallery{position:sticky;top:calc(var(--head-h) + 20px)}
 .gmain{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:1;display:grid;place-items:center;transform:translateZ(0);
   background:radial-gradient(70% 56% at 50% 32%,#fffdf6 0%,#faf1db 40%,#eeddba 74%,#e2cfa6 100%);
@@ -143,7 +143,7 @@ main.pdp{padding-inline:var(--pad-hero)}
 .sec-head{text-align:center;max-width:640px;margin:0 auto clamp(30px,4vw,52px)}
 .sec-head h2{font-size:clamp(2rem,4vw,3rem);margin:.3em 0 .3em}
 .sec-head p{color:var(--ink-soft);margin:0}
-/* quality / story band — DARK cinematic accent on the light page */
+/* quality / story band, DARK cinematic accent on the light page */
 .qual{position:relative;overflow:hidden;border-radius:var(--r-lg);color:var(--dtxt);
   background:radial-gradient(120% 120% at 15% 20%,#2a2113,#171009 60%,#100b06);
   border:1px solid var(--dline);box-shadow:0 50px 100px -50px rgba(23,22,20,.7)}
@@ -176,7 +176,7 @@ main.pdp{padding-inline:var(--pad-hero)}
 .rcard .m img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.rcard:hover .m img{transform:scale(1.05)}
 .rcard .b{padding:16px 18px 20px}.rcard h3{font-family:Inter;font-weight:600;font-size:.98rem;margin:0 0 4px}
 .rcard .p{color:var(--gold);font-weight:700}
-/* footer — dark (wie Startseite) */
+/* footer, dark (wie Startseite) */
 footer{position:relative;color:var(--cream-1);margin-top:clamp(16px,2vw,32px);padding-block:clamp(84px,10vw,150px) clamp(34px,4vw,48px);overflow:hidden;background:#140f0a;isolation:isolate}
 .fbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2}
 footer::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
@@ -256,12 +256,14 @@ footer a{color:rgba(255,255,255,.72);font-size:.92rem}footer a:hover{color:#fff}
 .bundle .tag.tag-firm{font-size:.8rem;padding:4px 12px;top:-12px;letter-spacing:.02em}
 </style>
 <link rel="stylesheet" href="dark.css?v=38">
+<link rel="stylesheet" href="shop.css?v=1">
+<meta name="description" content="Geschenkpackung von The Vanilla mit Mini-Gläsern und Vanilleschote im Reagenzglas, mit Mengenrabatt ab 20 Packungen.">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#0A0907">
 </head>
 <body>
 
-<div class="topbar"><div class="wrap">Kostenloser Versand ab CHF 99 · <a href="index.html#newsletter" style="color:inherit"><b>10 % Rabatt auf deine erste Bestellung</b></a> · Handverlesen in der Schweiz</div></div>
+<div class="topbar"><div class="wrap">Kostenloser Versand ab CHF 99 · Lieferung innerhalb von 48 Stunden</div></div>
 
 <header>
   <div class="wrap nav">
@@ -270,10 +272,10 @@ footer a{color:rgba(255,255,255,.72);font-size:.92rem}footer a:hover{color:#fff}
       <a href="produkte.html">Shop</a><a href="weihnachtsmaerkte.html">Weihnachtsmärkte</a><a href="degustationsmenue.html">Degustationsmenü</a><a href="rezepte.html">Rezepte</a><a href="ueber-uns.html">Über uns</a>
     </nav>
     <div class="nav-ico">
-      <svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
-      <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
-      <svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9C1 8.5 3 5 6.5 5 9 5 12 8 12 8s3-3 5.5-3C21 5 23 8.5 21.5 12 19 16.5 12 21 12 21z"/></svg>
-      <svg class="ico" viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M6 6L5 2H2"/></svg>
+      <button class="ico-btn" type="button" data-tv="suche" aria-label="Suchen"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></button>
+      <button class="ico-btn" type="button" data-tv="konto" aria-label="Kundenkonto"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></button>
+      <button class="ico-btn" type="button" data-tv="merkliste" aria-label="Merkliste"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9C1 8.5 3 5 6.5 5 9 5 12 8 12 8s3-3 5.5-3C21 5 23 8.5 21.5 12 19 16.5 12 21 12 21z"/></svg><b class="ico-n" hidden>0</b></button>
+      <button class="ico-btn" type="button" data-tv="korb" aria-label="Warenkorb"><svg class="ico" viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M6 6L5 2H2"/></svg><b class="ico-n" hidden>0</b></button>
       <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
     </div>
   </div>
@@ -301,10 +303,10 @@ footer a{color:rgba(255,255,255,.72);font-size:.92rem}footer a:hover{color:#fff}
     <div class="hr"></div>
     <div class="price"><span class="now" id="price">CHF 32.50</span><span class="was" id="pwas" hidden></span><span class="save" id="psave" hidden></span></div>
 
-    <p class="lede">Möchten Sie etwas nicht Alltägliches verschenken? Dieses Vanille-Sortiment ist das auffällige, herzhaft duftende Geschenk zum Mitbringen – für Mitarbeitende, Kundinnen und Geschäftspartner auch in grösseren Mengen mit gestaffeltem Rabatt.</p>
+    <p class="lede">Möchten Sie etwas nicht Alltägliches verschenken? Dieses Vanille-Sortiment ist das auffällige, herzhaft duftende Geschenk zum Mitbringen, für Mitarbeitende, Kundinnen und Geschäftspartner auch in grösseren Mengen mit gestaffeltem Rabatt.</p>
 
     <ul class="benefits">
-      <li><span class="chk"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span> 3 Mini-Gläser – Sortiment 1 oder 2</li>
+      <li><span class="chk"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span> 3 Mini-Gläser, Sortiment 1 oder 2</li>
       <li><span class="chk"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span> Plus 1 Reagenzglas mit 2 Vanilleschoten «Extra» 21–23 cm</li>
       <li><span class="chk"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span> In schwarzer Tragtasche mit geprägtem Vanilla-Logo</li>
       <li><span class="chk"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span> Mengenrabatt ab 20 Packungen</li>
@@ -324,8 +326,8 @@ footer a{color:rgba(255,255,255,.72);font-size:.92rem}footer a:hover{color:#fff}
     <div class="buycta buycta-q"><div class="qty" id="qty"><button type="button" data-d="-1" aria-label="Menge verringern">−</button><input id="qtyN" inputmode="numeric" pattern="[0-9]*" value="1" aria-label="Menge"><button type="button" data-d="1" aria-label="Menge erhöhen">+</button></div><button class="btn btn-dark"><span>In den Warenkorb</span><span class="arrow">→</span></button></div>
     <p class="qty-hint" id="qtyHint" role="status" hidden></p>
 
-    <div class="pays"><img src="img/pay/visa.svg" alt="Visa"><img src="img/pay/mastercard.svg" alt="Mastercard"><img src="img/pay/amex.svg" alt="American Express"><img src="img/pay/twint.svg" alt="TWINT"><img src="img/pay/paypal.svg" alt="PayPal"><img src="img/pay/applepay.svg" alt="Apple Pay"></div>
-    <div class="deliver">Bestellst du in den nächsten <b id="ctd">10 Std 50 Min</b>, versenden wir noch heute.</div>
+    <div class="pays"><img src="img/pay/visa.svg" alt="Visa"><img src="img/pay/mastercard.svg" alt="Mastercard"><img src="img/pay/amex.svg" alt="American Express"><img src="img/pay/paypal.svg" alt="PayPal"><img src="img/pay/applepay.svg" alt="Apple Pay"></div>
+    <div class="deliver">Lieferung innerhalb von <b>48 Stunden</b>.</div>
 
     <div class="timeline">
       <div class="tstep"><span class="ci"><svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L5 2H2"/></svg></span><b>Bestellt</b><span>Heute</span></div>
@@ -333,11 +335,11 @@ footer a{color:rgba(255,255,255,.72);font-size:.92rem}footer a:hover{color:#fff}
       <div class="tstep"><span class="ci"><svg viewBox="0 0 24 24"><path d="M4 8l8-4 8 4-8 4z"/><path d="M4 8v8l8 4 8-4V8"/></svg></span><b>Geliefert</b><span>innerhalb von 48 h</span></div>
     </div>
 
-    <div class="charity"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9C1 8.5 3 5 6.5 5 9 5 12 8 12 8s3-3 5.5-3C21 5 23 8.5 21.5 12 19 16.5 12 21 12 21z"/></svg><div>Wir arbeiten <b>direkt mit unseren Partnerfarmen</b> — faire Preise für die Bauern, beste Qualität für dich.</div></div>
+    <div class="charity"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9C1 8.5 3 5 6.5 5 9 5 12 8 12 8s3-3 5.5-3C21 5 23 8.5 21.5 12 19 16.5 12 21 12 21z"/></svg><div>Wir arbeiten <b>direkt mit unseren Partnerfarmen</b>, faire Preise für die Bauern, beste Qualität für dich.</div></div>
 
     <div class="acc">
       <details><summary>Inhalt <span class="ico-pm"></span></summary><div class="body"><p style="margin:0 0 .6em"><b>Sortiment 1:</b> Vanille-Paste 20 g, Vanille-Pulver 8 g, Zucker mit Vanille 20 g</p><p style="margin:0 0 .6em"><b>Sortiment 2:</b> Vanille-Salz fein 20 g, Schwarze Vanille-Würze grob 20 g, Zucker mit Vanille 20 g</p><p style="margin:0">Dazu je 1 Reagenzglas mit 2 Vanilleschoten «Extra» 21–23 cm (Grade A), 1 Beschrieb mit Verwendung und 1 schwarze Tragtasche mit heissluftgeprägtem Vanilla-Logo (L/B/H 13 × 6 × 15 cm).</p></div></details>
-      <details><summary>Herkunft &amp; Qualität <span class="ico-pm"></span></summary><div class="body">Veredelt in unserer Manufaktur in Schlieren. Labor Veritas Zürich hat bei unserer Vanille einen Vanillin-Gehalt von 2,63 % gemessen – den höchsten je in der Schweiz gemessenen Wert (Durchschnitt ca. 1,4 %).</div></details>
+      <details><summary>Herkunft &amp; Qualität <span class="ico-pm"></span></summary><div class="body">Veredelt in unserer Manufaktur in Schlieren. Labor Veritas Zürich hat bei unserer Vanille einen Vanillin-Gehalt von 2,63 % gemessen, den höchsten je in der Schweiz gemessenen Wert (Durchschnitt ca. 1,4 %).</div></details>
       <details><summary>Versand &amp; Rückgabe <span class="ico-pm"></span></summary><div class="body">Lieferung innerhalb von 48 Stunden. Ab CHF 99 kostenlos innerhalb der Schweiz. 30 Tage Rückgaberecht bei ungeöffneter Ware.</div></details>
     </div>
   </section>
@@ -350,11 +352,11 @@ footer a{color:rgba(255,255,255,.72);font-size:.92rem}footer a:hover{color:#fff}
     <div class="qual-in">
       <div>
         <h2 class="serif">Doppelt so viel Aroma wie üblich</h2>
-        <p>Unabhängig gemessen: bis zu <b style="color:var(--gold-bright)">2,63 % Vanillin</b> — rund doppelt so viel wie der Branchenschnitt von 1,4 %. Handverlesen und in unserer Manufaktur in Schlieren veredelt.</p>
+        <p>Unabhängig gemessen: bis zu <b style="color:var(--gold-bright)">2,63 % Vanillin</b>, rund doppelt so viel wie der Branchenschnitt von 1,4 %. Gemessen im Labor Veritas Zürich, veredelt in unserer Manufaktur in Schlieren.</p>
         <div class="qstats">
           <div><b>2,63%</b><span>Vanillin-Gehalt</span></div>
-          <div><b>100%</b><span>Handverlesen</span></div>
-          <div><b>3</b><span>Herkunftssorten</span></div>
+          <div><b>1,4%</b><span>Schnitt herkömmlicher Schoten</span></div>
+          <div><b>3</b><span>Vanillesorten</span></div>
         </div>
       </div>
       <div class="qual-media"><img src="img/pod-vanilla-v5.png" alt="Aufgeschnittene Vanilleschote mit Mark"></div>
@@ -365,24 +367,21 @@ footer a{color:rgba(255,255,255,.72);font-size:.92rem}footer a:hover{color:#fff}
 <!-- REVIEWS -->
 <section class="section reveal" style="padding-top:0"><div class="wrap">
   <div class="sec-head">
-    <h2 class="serif">4,9 von 5 — über 2'000 Bewertungen</h2>
-    <p>Ein kleiner Auszug aus den Rückmeldungen unserer Kund:innen.</p>
+    <h2 class="serif">Was Köche sagen</h2>
+    <p>Stimmen aus der Spitzengastronomie über unsere Vanille.</p>
   </div>
   <div class="rev-grid">
     <article class="rcardr">
-      <div class="stars">★★★★★</div>
-      <p>„Ein halber Teelöffel reicht für ein ganzes Blech — so intensiv war noch keine Vanille bei mir.“</p>
-      <div class="who"><span class="ava">SM</span><div><b>Sarah M.</b><span class="verified">✓ Verifizierter Kauf</span></div></div>
+      <p>„Ich bin sehr happy mit all deinen Vanille Produkten. Die Qualität ist super!“</p>
+      <div class="who"><span class="ava">JA</span><div><b>Jeroen Achtien</b><span class="verified">Restaurant Sens, Vitznauerhof</span></div></div>
     </article>
     <article class="rcardr">
-      <div class="stars">★★★★★</div>
-      <p>„Wir nutzen die Paste in unserer Patisserie täglich. Das Aroma ist unvergleichlich sauber.“</p>
-      <div class="who"><span class="ava">MR</span><div><b>Marco R. · Pâtissier</b><span class="verified">✓ Verifizierter Kauf</span></div></div>
+      <p>„Mit den Vanilleschoten habe ich nun wirklich mehr Vanille in meinen Produkten und meine Gäste sind begeistert von diesem Aroma!“</p>
+      <div class="who"><span class="ava">MA</span><div><b>Martin Aeschlimann</b><span class="verified">Restaurant Wyberg</span></div></div>
     </article>
     <article class="rcardr">
-      <div class="stars">★★★★★</div>
-      <p>„Endlich echte Vanille ohne künstliche Aromen. Man schmeckt den Unterschied sofort.“</p>
-      <div class="who"><span class="ava">LK</span><div><b>Lena K.</b><span class="verified">✓ Verifizierter Kauf</span></div></div>
+      <p>„Die Schoten sind fester, glänzender, haben viel mehr Vanille-Mark enthalten und sind geschmacklich auch noch viel besser.“</p>
+      <div class="who"><span class="ava">ML</span><div><b>Michael Lang</b><span class="verified">Silvio’s Ampère, Rupperswil</span></div></div>
     </article>
   </div>
 </div></section>
@@ -412,12 +411,12 @@ footer a{color:rgba(255,255,255,.72);font-size:.92rem}footer a:hover{color:#fff}
       </div>
     </div>
     <div class="f-col"><h4>Shop</h4><ul><li><a href="produkte.html#schoten">Vanilleschoten</a></li><li><a href="produkte.html#glas">Vanillepaste</a></li><li><a href="produkte.html#pulver">Vanillepulver</a></li><li><a href="produkte.html#salz">Vanille-Salz</a></li><li><a href="geschenkset.html">Geschenksets</a></li></ul></div>
-    <div class="f-col"><h4>Manufaktur</h4><ul><li><a href="ueber-uns.html">Über uns</a></li><li><a href="#">Qualität</a></li><li><a href="weihnachtsmaerkte.html">Weihnachtsmärkte</a></li><li><a href="degustationsmenue.html">Degustationsmenü</a></li><li><a href="rezepte.html">Rezepte</a></li></ul></div>
-    <div class="f-col"><h4>Service</h4><ul><li><a href="mailto:stephan@the-vanilla.ch">Kontakt</a></li><li><a href="#">Versand</a></li><li><a href="#">Impressum</a></li><li><a href="#">AGB</a></li></ul></div>
+    <div class="f-col"><h4>Manufaktur</h4><ul><li><a href="ueber-uns.html">Über uns</a></li><li><a href="ueber-uns.html#qualitaet">Qualität</a></li><li><a href="weihnachtsmaerkte.html">Weihnachtsmärkte</a></li><li><a href="degustationsmenue.html">Degustationsmenü</a></li><li><a href="rezepte.html">Rezepte</a></li></ul></div>
+    <div class="f-col"><h4>Service</h4><ul><li><a href="mailto:stephan@the-vanilla.ch">Kontakt</a></li><li><a href="versand.html">Versand &amp; Rückgabe</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="agb.html">AGB</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
   </div>
   <div class="f-bottom">
     <span>© 2026 The Vanilla GmbH · Alle Rechte vorbehalten.</span>
-    <div class="pays"><img src="img/pay/visa.svg" alt="Visa"><img src="img/pay/mastercard.svg" alt="Mastercard"><img src="img/pay/amex.svg" alt="American Express"><img src="img/pay/twint.svg" alt="TWINT"><img src="img/pay/paypal.svg" alt="PayPal"><img src="img/pay/applepay.svg" alt="Apple Pay"></div>
+    <div class="pays"><img src="img/pay/visa.svg" alt="Visa"><img src="img/pay/mastercard.svg" alt="Mastercard"><img src="img/pay/amex.svg" alt="American Express"><img src="img/pay/paypal.svg" alt="PayPal"><img src="img/pay/applepay.svg" alt="Apple Pay"></div>
   </div>
 </div></footer>
 
@@ -443,9 +442,6 @@ document.getElementById('qty').addEventListener('click',e=>{const b=e.target.clo
 qN.addEventListener('change',rechne);
 document.getElementById('bundles').addEventListener('click',e=>{const l=e.target.closest('.bundle');if(!l)return;qN.value=l.dataset.q;rechne()});
 rechne();
-// countdown
-let t=10*3600+50*60;const ctd=document.getElementById('ctd');
-setInterval(()=>{t=Math.max(0,t-1);const h=Math.floor(t/3600),m=Math.floor(t%3600/60),s=t%60;ctd.textContent=h+' Std '+m+' Min '+String(s).padStart(2,'0')+' Sek';},1000);
 // reveals
 const io=new IntersectionObserver((es)=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
@@ -461,5 +457,6 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
  addEventListener('load',fix);addEventListener('resize',fix);fix();})();
 </script>
 <script src="nav.js"></script>
+<script src="shop.js?v=1" defer></script>
 </body>
 </html>

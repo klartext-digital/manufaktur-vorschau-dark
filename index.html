@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Vanilla — Manufaktur</title>
+<title>The Vanilla | Manufaktur</title>
 <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +45,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;o
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
 /* buttons */
-/* CTA hover: Concept-Theme "btn-fill" — runder Fill-Kreis sweept gebogen hoch, Text invertiert mit Delay */
+/* CTA hover: Concept-Theme "btn-fill", runder Fill-Kreis sweept gebogen hoch, Text invertiert mit Delay */
 .btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.6em;padding:1.15em 2.4em;border-radius:var(--r-pill);
   font-weight:600;font-size:1rem;letter-spacing:.01em;cursor:pointer;border:1.5px solid transparent;overflow:hidden;isolation:isolate;
   transition:color .2s ease,border-color .25s ease,box-shadow .3s ease}
@@ -100,7 +100,7 @@ header.scrolled{box-shadow:0 6px 26px -20px rgba(23,22,20,.6);border-color:var(-
 .hero>.wrap{padding-inline:var(--pad-hero)}
 /* Bild-Banner so breit wie der Hero; Text bleibt auf der globalen Einzugskante (--pad) */
 #recipes>.wrap,#gift>.wrap{padding-inline:var(--pad-hero)}
-/* Kunden – echte Kundenlogos (dunkles Band wie Original) */
+/* Kunden, echte Kundenlogos (dunkles Band wie Original) */
 .kunden{padding-block:clamp(30px,4vw,56px) clamp(30px,4vw,52px)}
 .kunden>.wrap{padding-inline:var(--pad-hero)}
 .kunden-box{text-align:center}
@@ -154,7 +154,7 @@ header.scrolled{box-shadow:0 6px 26px -20px rgba(23,22,20,.6);border-color:var(-
 .sec-head.center{flex-direction:column;text-align:center;align-items:center}
 .sec-head.center p{margin-inline:auto}
 
-/* categories — staged photo cards on a vanilla backdrop */
+/* categories, staged photo cards on a vanilla backdrop */
 .arrow{display:inline-block;transition:transform .35s}
 .shopsec{position:relative;overflow:hidden;background:var(--cream-1);padding-top:clamp(26px,3.4vw,52px)}
 .shopsec .shop-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 50%;transform:scale(1.22) translateY(-10%);transform-origin:center;z-index:0}
@@ -182,7 +182,7 @@ header.scrolled{box-shadow:0 6px 26px -20px rgba(23,22,20,.6);border-color:var(-
 .cat .cbtn:hover{background:var(--gold-bright);color:#1c1407;border-color:var(--gold-bright)}
 .cat:hover .cbtn .arrow{transform:translateX(4px)}
 
-/* product cards — Local structure */
+/* product cards, Local structure */
 .prods{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
 
 .pcard{position:relative;background:#fff;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(23,22,20,.07);
@@ -254,7 +254,7 @@ header.scrolled{box-shadow:0 6px 26px -20px rgba(23,22,20,.6);border-color:var(-
 }
 @media(prefers-reduced-motion:reduce){.film-txt{transition:opacity .3s}}
 
-/* gift banner — own section, gift-set photo centered in the box */
+/* gift banner, own section, gift-set photo centered in the box */
 .gift{position:relative;width:100%;border-radius:var(--r-xl);overflow:hidden;isolation:isolate;aspect-ratio:2.3/1;min-height:440px;
   display:flex;align-items:center;box-shadow:0 50px 90px -60px rgba(23,22,20,.5)}
 .gift-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;z-index:-2}
@@ -295,7 +295,7 @@ header.scrolled{box-shadow:0 6px 26px -20px rgba(23,22,20,.6);border-color:var(-
 .qstats b{display:block;font-family:Fraunces,serif;font-size:2rem;color:#fff;line-height:1}
 .qstats span{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6)}
 
-/* statement — full-bleed bold typographic */
+/* statement, full-bleed bold typographic */
 .stmtsec{position:relative;background:#241C12;color:var(--cream-1);overflow:hidden;isolation:isolate;min-height:92vh;min-height:92svh;display:flex;align-items:center}
 .stmtsec::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse at 28% 42%,rgba(216,178,92,.16),transparent 58%),radial-gradient(ellipse at 90% 90%,rgba(216,178,92,.08),transparent 55%)}
 .stmtsec .doodle{position:absolute;stroke:var(--gold-bright);stroke-width:1.4;fill:none;opacity:.22;z-index:0;pointer-events:none}
@@ -413,7 +413,7 @@ header.scrolled{box-shadow:0 6px 26px -20px rgba(23,22,20,.6);border-color:var(-
 .news input{flex:1;min-width:220px;padding:1em 1.3em;border-radius:var(--r-pill);border:1px solid var(--line);background:#fff;font:inherit}
 .news input:focus{outline:none;border-color:var(--gold)}
 
-/* newsletter v2 – ganzes foto, zentriert (Mockup) */
+/* newsletter v2, ganzes foto, zentriert (Mockup) */
 .nlx{position:relative;margin-inline:var(--pad-hero);border-radius:var(--r-xl);overflow:hidden;isolation:isolate;box-shadow:0 50px 90px -60px rgba(23,22,20,.5);background:#120e0a}
 .nlx{height:max(726px,calc((100vw - 2*var(--pad-hero))/2.3))}
 .nlx-bg{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%;transform:scale(1.12);transform-origin:50% 2%}
@@ -561,6 +561,8 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 .cat:hover .cat-vid{opacity:1}
 </style>
 <link rel="stylesheet" href="dark.css?v=38">
+<link rel="stylesheet" href="shop.css?v=1">
+<meta name="description" content="The Vanilla Manufaktur in Schlieren: Vanilleschoten, Vanillepaste, Vanillepulver und Vanille-Salz mit bis zu 2,63 % Vanillin. Kostenloser Versand ab CHF 99.">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#0A0907">
 </head>
@@ -573,10 +575,10 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
       <a href="https://www.facebook.com/The-Vanilla-Manufaktur-103141285698840" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-2 0-3 1-3 3v2H8v3h3v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1z"/></svg></a>
       <a href="https://www.instagram.com/the_vanilla_gmbh_manufaktur/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 8.5A3.5 3.5 0 1012 15.5 3.5 3.5 0 0012 8.5zm5-1.2a.9.9 0 11-1.8 0 .9.9 0 011.8 0zM7 4h10a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
     </div>
-    <div class="tb-mid">Kostenloser Versand ab CHF 99 · <a href="#newsletter"><b>10 % Rabatt auf deine erste Bestellung</b></a></div>
+    <div class="tb-mid">Kostenloser Versand ab CHF 99 · Lieferung innerhalb von 48 Stunden</div>
     <div class="tb-right">
-      <span>Deutsch <svg class="caret" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
-      <span>Schweiz (CHF) <svg class="caret" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+      <span>Deutsch</span>
+      <span>Schweiz (CHF)</span>
     </div>
   </div>
 </div>
@@ -584,7 +586,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 <!-- HEADER -->
 <header id="head">
   <div class="wrap nav">
-    <a class="brand" href="#"><img src="img/logo.png" alt="The Vanilla"></a>
+    <a class="brand" href="index.html"><img src="img/logo.png" alt="The Vanilla"></a>
     <nav class="menu">
       <a href="produkte.html">Shop</a>
       <a href="weihnachtsmaerkte.html">Weihnachtsmärkte</a>
@@ -593,10 +595,10 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
       <a href="ueber-uns.html">Über uns</a>
     </nav>
     <div class="nav-ico">
-      <svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
-      <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
-      <svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9C1 8.5 3 5 6.5 5 9 5 12 8 12 8s3-3 5.5-3C21 5 23 8.5 21.5 12 19 16.5 12 21 12 21z"/></svg>
-      <span class="cart-dot"><svg class="ico" viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M6 6L5 2H2"/></svg><b>2</b></span>
+      <button class="ico-btn" type="button" data-tv="suche" aria-label="Suchen"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></button>
+      <button class="ico-btn" type="button" data-tv="konto" aria-label="Kundenkonto"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></button>
+      <button class="ico-btn" type="button" data-tv="merkliste" aria-label="Merkliste"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9C1 8.5 3 5 6.5 5 9 5 12 8 12 8s3-3 5.5-3C21 5 23 8.5 21.5 12 19 16.5 12 21 12 21z"/></svg><b class="ico-n" hidden>0</b></button>
+      <button class="ico-btn" type="button" data-tv="korb" aria-label="Warenkorb"><svg class="ico" viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M6 6L5 2H2"/></svg><b class="ico-n" hidden>0</b></button>
       <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
     </div>
   </div>
@@ -685,7 +687,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
       <img class="gift-bg" src="img/geschenkset-section-v2.jpg" alt="The Vanilla Geschenkpackung">
       <div class="gift-in">
         <h2 class="serif">Das perfekte<br>Geschenk für<br>echte <span class="g">Geniesser</span></h2>
-        <p>Edle Geschenksets mit feinster Vanille – liebevoll verpackt in unserer Manufaktur in Schlieren.</p>
+        <p>Edle Geschenksets mit feinster Vanille, liebevoll verpackt in unserer Manufaktur in Schlieren.</p>
         <a class="btn btn-gold" href="geschenkset.html"><span>Geschenksets entdecken</span> <span class="arrow">→</span></a>
       </div>
     </div>
@@ -743,7 +745,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
       <img class="recipes-bg" src="img/rezepte-bg-v4.jpg" alt="">
       <div class="recipes-inner">
         <h2 class="serif">Rezepte, die begeistern</h2>
-        <p>Von der cremigen Crème brûlée bis zum Vanille-Gipfeli — entdecken Sie, was echte Vanille möglich macht.</p>
+        <p>Von der cremigen Crème brûlée bis zum Vanille-Gipfeli, entdecken Sie, was echte Vanille möglich macht.</p>
         <a class="btn btn-dark" href="rezepte.html"><span>Alle Rezepte entdecken</span> <span class="arrow">→</span></a>
       </div>
     </div>
@@ -753,7 +755,7 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 <!-- VOICES -->
 <section class="sec" id="story" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head center reveal"><div><h2>Echte Stimmen. Echter Genuss</h2><p>Was unsere Kundinnen und Kunden sagen.</p></div></div>
+    <div class="sec-head center reveal"><div><h2>Echte Stimmen. Echter Genuss</h2><p>Was Köche und Kundinnen über unsere Vanille sagen.</p></div></div>
     <div class="tst reveal" id="tst"></div>
     <div class="tst-ctrl reveal"><button class="tst-arrow" data-dir="-1" aria-label="Vorherige Bewertungen">&#8249;</button><button class="tst-arrow" data-dir="1" aria-label="Weitere Bewertungen">&#8250;</button></div>
   </div>
@@ -764,29 +766,29 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
   <div class="wrap faq reveal">
     <div class="faq-head">
       <h2 class="serif">Gut zu wissen</h2>
-      <p>Die Fragen, die uns am häufigsten gestellt werden — kurz und ehrlich beantwortet.</p>
+      <p>Die Fragen, die uns am häufigsten gestellt werden, kurz und ehrlich beantwortet.</p>
       <a class="cta-link" href="mailto:stephan@the-vanilla.ch"><span>Noch Fragen? Kontakt</span> <span class="arrow" aria-hidden="true">↗</span></a>
     </div>
     <div class="faq-list">
       <details class="faq-item">
         <summary>Warum ist eure Vanille teurer als aus dem Supermarkt?<span class="faq-ico"></span></summary>
-        <div class="faq-a">Weil echte Qualität ihren Preis hat: Wir kaufen direkt bei unseren Partnerfarmen zu fairen Preisen, verzichten auf Zwischenhändler und selektieren jede Schote von Hand. Das Ergebnis ist ein Vanillin-Gehalt von bis zu 2,63 % — rund doppelt so viel wie im Branchenschnitt.</div>
+        <div class="faq-a">Weil echte Qualität ihren Preis hat: Wir kaufen direkt bei unseren Partnerfarmen zu fairen Preisen, verzichten auf Zwischenhändler und selektieren jede Schote von Hand. Das Ergebnis ist ein Vanillin-Gehalt von bis zu 2,63 %, rund doppelt so viel wie im Branchenschnitt.</div>
       </details>
       <details class="faq-item">
         <summary>Wie bewahre ich Vanilleschoten richtig auf?<span class="faq-ico"></span></summary>
-        <div class="faq-a">Am besten luftdicht, kühl und dunkel — zum Beispiel im mitgelieferten Glas. So bleiben die Schoten monatelang aromatisch und geschmeidig. Bitte nicht im Kühlschrank lagern, dort können sie austrocknen und schimmeln.</div>
+        <div class="faq-a">Am besten luftdicht, kühl und dunkel, zum Beispiel im mitgelieferten Glas. So bleiben die Schoten monatelang aromatisch und geschmeidig. Bitte nicht im Kühlschrank lagern, dort können sie austrocknen und schimmeln.</div>
       </details>
       <details class="faq-item">
         <summary>Woher stammt eure Vanille?<span class="faq-ico"></span></summary>
-        <div class="faq-a">Aus drei Herkünften: Planifolia (Madagaskar), Tahitensis und die seltene Pompona. Wir kennen jede Farm und jede Familie persönlich und besuchen sie regelmässig — abgefüllt und veredelt wird alles in unserer Manufaktur in Schlieren bei Zürich.</div>
+        <div class="faq-a">Aus drei Herkünften: Planifolia (Madagaskar), Tahitensis und die seltene Pompona. Wir kennen jede Farm und jede Familie persönlich und besuchen sie regelmässig, abgefüllt und veredelt wird alles in unserer Manufaktur in Schlieren bei Zürich.</div>
       </details>
       <details class="faq-item">
         <summary>Was bedeutet der Vanillin-Gehalt von 2,63 %?<span class="faq-ico"></span></summary>
-        <div class="faq-a">Vanillin ist der wichtigste Aromastoff der Vanille. 2,63 % ist der höchste je in der Schweiz gemessene Wert — deutlich über dem Branchenschnitt von rund 1,4 %. Kurz gesagt: intensiveres Aroma, weniger Schote pro Rezept nötig.</div>
+        <div class="faq-a">Vanillin ist der wichtigste Aromastoff der Vanille. 2,63 % ist der höchste je in der Schweiz gemessene Wert, deutlich über dem Branchenschnitt von rund 1,4 %. Kurz gesagt: intensiveres Aroma, weniger Schote pro Rezept nötig.</div>
       </details>
       <details class="faq-item">
         <summary>Wie verwende ich Vanillepaste und -pulver?<span class="faq-ico"></span></summary>
-        <div class="faq-a">Die Paste ist ideal für Cremes, Glacé und Teige — ein Teelöffel ersetzt etwa eine Schote. Das Pulver eignet sich perfekt zum Backen und für Getränke, da es sich fein verteilt und schön dunkel färbt.</div>
+        <div class="faq-a">Die Paste ist ideal für Cremes, Glacé und Teige, ein Teelöffel ersetzt etwa eine Schote. Das Pulver eignet sich perfekt zum Backen und für Getränke, da es sich fein verteilt und schön dunkel färbt.</div>
       </details>
       <details class="faq-item">
         <summary>Wie schnell wird geliefert?<span class="faq-ico"></span></summary>
@@ -802,10 +804,10 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
     <img class="nlx-bg" src="img/newsletter-stephan-echt.jpg" alt="Stephan Stemminger prüft Vanilleschoten in der Manufaktur">
     <div class="nlx-in">
       <h2 class="serif">Rezepte, Neuheiten<br>&amp; <span class="g">exklusive Angebote</span></h2>
-      <p class="nlx-sub">Erhalten Sie besondere Vanille-Rezepte, Hintergrundgeschichten und limitierte Angebote – direkt in Ihr Postfach.</p>
-      <form class="nlx-form" onsubmit="return false">
-        <input type="email" placeholder="Ihre E-Mail-Adresse" aria-label="E-Mail">
-        <button type="submit"><span>10&nbsp;% sichern</span> <span class="arrow">→</span></button>
+      <p class="nlx-sub">Erhalten Sie besondere Vanille-Rezepte, Hintergrundgeschichten und limitierte Angebote, direkt in Ihr Postfach.</p>
+      <form class="nlx-form" id="nlForm" novalidate>
+        <input type="email" name="email" required placeholder="Ihre E-Mail-Adresse" aria-label="E-Mail" autocomplete="email">
+        <button type="submit"><span>Abonnieren</span> <span class="arrow">→</span></button>
       </form>
       <p class="nlx-consent"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Ich stimme zu, regelmässig den Newsletter zu erhalten. Abmeldung jederzeit möglich.</p>
     </div>
@@ -826,12 +828,12 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
         </div>
       </div>
       <div class="f-col"><h4>Shop</h4><ul><li><a href="produkte.html#schoten">Vanilleschoten</a></li><li><a href="produkte.html#glas">Vanillepaste</a></li><li><a href="produkte.html#pulver">Vanillepulver</a></li><li><a href="produkte.html#salz">Vanille-Salz</a></li><li><a href="geschenkset.html">Geschenksets</a></li></ul></div>
-      <div class="f-col"><h4>Manufaktur</h4><ul><li><a href="ueber-uns.html">Über uns</a></li><li><a href="#">Qualität</a></li><li><a href="weihnachtsmaerkte.html">Weihnachtsmärkte</a></li><li><a href="degustationsmenue.html">Degustationsmenü</a></li><li><a href="rezepte.html">Rezepte</a></li></ul></div>
-      <div class="f-col"><h4>Service</h4><ul><li><a href="mailto:stephan@the-vanilla.ch">Kontakt</a></li><li><a href="#">Versand</a></li><li><a href="#">Impressum</a></li><li><a href="#">AGB</a></li></ul></div>
+      <div class="f-col"><h4>Manufaktur</h4><ul><li><a href="ueber-uns.html">Über uns</a></li><li><a href="ueber-uns.html#qualitaet">Qualität</a></li><li><a href="weihnachtsmaerkte.html">Weihnachtsmärkte</a></li><li><a href="degustationsmenue.html">Degustationsmenü</a></li><li><a href="rezepte.html">Rezepte</a></li></ul></div>
+      <div class="f-col"><h4>Service</h4><ul><li><a href="mailto:stephan@the-vanilla.ch">Kontakt</a></li><li><a href="versand.html">Versand &amp; Rückgabe</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="agb.html">AGB</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
     </div>
     <div class="f-bottom">
       <span>© 2026 The Vanilla GmbH · Alle Rechte vorbehalten.</span>
-      <div class="pays"><img src="img/pay/visa.svg" alt="Visa"><img src="img/pay/mastercard.svg" alt="Mastercard"><img src="img/pay/amex.svg" alt="American Express"><img src="img/pay/twint.svg" alt="TWINT"><img src="img/pay/paypal.svg" alt="PayPal"><img src="img/pay/applepay.svg" alt="Apple Pay"></div>
+      <div class="pays"><img src="img/pay/visa.svg" alt="Visa"><img src="img/pay/mastercard.svg" alt="Mastercard"><img src="img/pay/amex.svg" alt="American Express"><img src="img/pay/paypal.svg" alt="PayPal"><img src="img/pay/applepay.svg" alt="Apple Pay"></div>
     </div>
   </div>
 </footer>
@@ -935,20 +937,22 @@ if(film&&canvas){
 
 // Testimonials
 const testimonials=[
- {img:"tst1-amateur.jpg",name:"Sarah M.",q:"Die aromatischste Vanille, die ich je hatte. Meine Desserts schmecken plötzlich nach mehr."},
- {img:"tst2-amateur.jpg",name:"Marco R.",q:"Als Hobbybäcker merke ich den Unterschied sofort — voll, echt, kein Kunstaroma."},
- {img:"tst3-amateur.jpg",name:"Lena K.",q:"Ein Teelöffel und der ganze Teig duftet. Absolute Empfehlung!"},
- {img:"tst4-amateur.jpg",name:"Thomas B.",q:"Endlich Schweizer Qualität, der man vertraut. Herkunft und Aroma top."},
- {img:"tst5-amateur.jpg",name:"Rita H.",q:"Verschenke die Sets regelmässig — kommt immer hervorragend an."},
- {img:"tst6-amateur.jpg",name:"David O.",q:"Sogar im Kaffee ein Genuss. Qualität schmeckt man einfach."}
+ {name:"Cornelia Meyer",src:"",s:5,q:"Wow! So habe ich Vanille nicht gekannt. Sehr fein und weich und wahnsinn in der Nase."},
+ {name:"Jeroen Achtien",src:"Restaurant Sens, Vitznauerhof",s:0,q:"Ich bin sehr happy mit all deinen Vanille Produkten. Wir brauchen dein Vanille Salz um die Makrelen zu pökeln. Die Vanilleschoten für unser Öl. Die Qualität ist super!"},
+ {name:"Adrian Burki",src:"",s:5,q:"Sehr schöne und frische Schoten, kaufe sie für mein Restaurant in Zürich."},
+ {name:"Antonio Collaiani",src:"Ristorante Ornellaia",s:0,q:"Deine Vanilleschoten sind Top!!! Ich habe alle Produkte von The Vanilla Manufaktur in Schlieren degustiert und bin von der Qualität begeistert."},
+ {name:"A. Scholz",src:"",s:4,q:"So muss Vanille sein! Absolut klasse."},
+ {name:"Martin Aeschlimann",src:"Restaurant Wyberg",s:0,q:"Die Vanille von THE VANILLA Manufaktur in Schlieren ist echt ein Spitzenprodukt!"},
+ {name:"Lukas Frohofer",src:"Pflegezentrum im Spitz, Kloten",s:0,q:"Eindrückliche Vanilleschote! Beste Qualität zu einem fairen Preis."},
+ {name:"Thomas Huber",src:"Restaurant Krone Sihlbrugg",s:0,q:"Die Vanille ist wirklich perfekt. Er hat Cannelés gemacht und das Vanillepulver hat nicht gefärbt, also auch perfekt."}
 ];
 const tstEl=document.getElementById('tst');
 if(tstEl){tstEl.innerHTML=testimonials.map(t=>`
- <article class="tcard">
-   <div class="tphoto"><img src="img/${t.img}" alt="${t.name}" loading="lazy" draggable="false"></div>
+ <article class="tcard tcard-q">
    <div class="tbody">
-     <div class="tmeta"><span class="stars">★★★★★</span><span class="tname">${t.name} <svg class="verif" viewBox="0 0 24 24"><path d="M12 2l2.4 1.8 3-.2 1 2.8 2.4 1.8-1 2.8 1 2.8-2.4 1.8-1 2.8-3-.2L12 22l-2.4-1.8-3 .2-1-2.8L3.2 16l1-2.8-1-2.8 2.4-1.8 1-2.8 3 .2z"/><path d="M8.5 12l2.2 2.2 4.3-4.4" fill="none" stroke="#fff" stroke-width="1.6"/></svg></span></div>
-     <p class="tquote">„${t.q}"</p>
+     ${t.s?`<div class="tmeta"><span class="stars" aria-label="${t.s} von 5 Sternen">${'★'.repeat(t.s)}${'☆'.repeat(5-t.s)}</span></div>`:''}
+     <p class="tquote">„${t.q}“</p>
+     <div class="twho"><b>${t.name}</b>${t.src?`<span>${t.src}</span>`:''}</div>
    </div>
  </article>`).join('');}
 
@@ -957,7 +961,7 @@ document.querySelectorAll('.tst-arrow').forEach(b=>b.addEventListener('click',()
   if(!tstEl)return;const card=tstEl.querySelector('.tcard');const step=card?card.offsetWidth+22:320;
   tstEl.scrollBy({left:(parseInt(b.dataset.dir,10))*step,behavior:'smooth'});
 }));
-// drag-to-scroll (mit Maus seitlich ziehen – always available)
+// drag-to-scroll (mit Maus seitlich ziehen, always available)
 if(tstEl){
   let down=false,moved=false,sx=0,sl=0;
   tstEl.style.cursor='grab';
@@ -982,7 +986,7 @@ if(tstEl){
   tstEl.addEventListener('click',e=>{if(moved){e.preventDefault();e.stopPropagation();}},true);
 }
 
-// Smooth scroll site-wide (Lenis) — inertial, makes the frame-scrub fluid
+// Smooth scroll site-wide (Lenis), inertial, makes the frame-scrub fluid
 if(window.Lenis && !matchMedia('(prefers-reduced-motion: reduce)').matches){
   const lenis=new Lenis({ duration:1.2, easing:t=>Math.min(1,1.001-Math.pow(2,-10*t)), smoothWheel:true, touchMultiplier:1.6 });
   function lraf(t){ lenis.raf(t); requestAnimationFrame(lraf); }
@@ -994,5 +998,6 @@ if(window.Lenis && !matchMedia('(prefers-reduced-motion: reduce)').matches){
 }
 </script>
 <script src="nav.js"></script>
+<script src="shop.js?v=1" defer></script>
 </body>
 </html>
