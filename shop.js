@@ -157,6 +157,6 @@ const nl=$('#nlForm');
 if(nl){nl.addEventListener('submit',e=>{e.preventDefault();const i=nl.querySelector('input[type=email]');let m=nl.parentElement.querySelector('.nl-msg');
   if(!m){m=document.createElement('p');m.className='nl-msg';m.setAttribute('role','status');nl.after(m)}
   if(!i.value.trim()||!i.checkValidity()){m.textContent='Bitte gib eine gültige E-Mail-Adresse ein.';m.classList.add('fehler');i.focus();return}
-  m.classList.remove('fehler');m.textContent='Danke! In der Vorschau wird die Anmeldung noch nicht gespeichert, im Live-Shop geht sie direkt an Shopify.';i.value=''})}
+  m.classList.remove('fehler');m.textContent='Danke! Im Live-Shop kommt dein Code für 10 % auf die erste Bestellung per E-Mail. In der Vorschau wird die Anmeldung noch nicht gespeichert.';i.value=''})}
 zaehler();
 })();
