@@ -538,3 +538,19 @@ body.mnav-offen{overflow:hidden}
   .film-right{bottom:17%}
   .film-bottom{bottom:5%}
 }
+/*handy-erster-bildschirm: einzeilige Kopfleiste (Texte wechseln sich ab), Startbild passt mit Text und Knopf auf den ersten Bildschirm*/
+@media (max-width:700px){
+  html body .topbar{padding-block:0!important}
+  html body .topbar>.wrap,html body .topbar .tb-mid{position:relative;height:30px!important;line-height:30px!important;white-space:nowrap!important;overflow:hidden!important;padding-block:0!important}
+  html body .topbar .tb-a,html body .topbar .tb-a~a{line-height:30px!important}
+  .topbar .tb-a,.topbar .tb-a~a{position:absolute;left:0;right:0;top:0;display:block;text-align:center;animation:tbWechsel 9s infinite}
+  .topbar .tb-a~a{animation-delay:-4.5s}
+  @keyframes tbWechsel{0%,44%{opacity:1;transform:none}50%,94%{opacity:0;transform:translateY(-6px)}100%{opacity:1;transform:none}}
+}
+@media (max-width:700px) and (prefers-reduced-motion:reduce){.topbar .tb-a{display:none}.topbar .tb-a~a{animation:none;opacity:1}}
+@media (max-width:640px){
+  .hero-card img.bg{aspect-ratio:auto!important;height:max(210px,calc(100svh - 30px - var(--head-h) - 318px))!important}
+  .hero h1{font-size:clamp(2.2rem,10.4vw,2.7rem)!important;margin-bottom:.32em}
+  .hero-sub{margin-bottom:1.1em!important;font-size:1rem}
+  .hero-copy{margin-top:-46px!important;padding-bottom:22px}
+}
