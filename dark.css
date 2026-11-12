@@ -557,3 +557,18 @@ body.mnav-offen{overflow:hidden}
   .hero h1{font-size:clamp(2.2rem,10.4vw,2.7rem)!important;margin-bottom:.3em;text-shadow:0 2px 20px rgba(0,0,0,.6)}
   .hero-sub{margin-bottom:1.1em!important;font-size:1rem;max-width:30ch;text-shadow:0 1px 10px rgba(0,0,0,.7)}
 }
+/*handy-einheitlich 12.11.2026: Abstaende, Titelgroessen, linksbuendig, Fusszeile zweispaltig*/
+@media (max-width:640px){
+  :root{--sec-y:48px}
+  html body section h2:not(.film-txt h2):not(.kunden-title):not(.legal-in h2):not(#wmVorbei h2):not(.wm-alt h2):not(#rd-t),html body main h2:not(.legal-in h2):not(.kunden-title):not(#wmVorbei h2):not(.wm-alt h2):not(#rd-t){font-size:clamp(1.85rem,8.4vw,2.3rem)!important;line-height:1.08!important;text-wrap:balance}
+  html body .sec-head,html body .sec-head.center,html body .rel h2,html body .cmp-head,html body .qual-in,html body .recipes-inner,html body .nlx-in{text-align:left!important}
+  html body .sec-head p,html body .cmp-head p,html body .qual p,html body .recipes-inner p,html body .nlx-in p{margin-left:0!important;margin-right:0!important}
+  html body .sec-head{align-items:flex-start!important}
+  html body .recipes-inner,html body .nlx-in{align-items:flex-start!important}
+  html body .qstats{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important;justify-items:start;text-align:left}
+  html body .qstats>div{text-align:left!important;align-items:flex-start!important;padding:0!important;border:0!important}
+  html body .qstats b{font-size:1.7rem!important}
+  html body .qstats span{font-size:.62rem!important;letter-spacing:.08em!important;line-height:1.35}
+  html body .f-top{grid-template-columns:1fr 1fr!important;column-gap:20px}
+  html body .f-brand{grid-column:1/-1}
+}
