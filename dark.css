@@ -504,7 +504,7 @@ body.mnav-offen{overflow:hidden}
 
 /*handy-shop 11.11.2026: Handy als Shop optimiert (schmale Raender, kompakter Kopf, Knoepfe einzeilig)*/
 @media (max-width:640px){
-  :root{--pad-hero:16px;--hero-in:8px;--head-h:62px}
+  :root{--pad-hero:12px;--hero-in:20px;--head-h:62px}
   header{height:var(--head-h);background:#0A0907}
   header .wrap{padding-inline:14px}
   .brand img{height:34px!important}
@@ -561,14 +561,30 @@ body.mnav-offen{overflow:hidden}
 @media (max-width:640px){
   :root{--sec-y:48px}
   html body section h2:not(.film-txt h2):not(.kunden-title):not(.legal-in h2):not(#wmVorbei h2):not(.wm-alt h2):not(#rd-t),html body main h2:not(.legal-in h2):not(.kunden-title):not(#wmVorbei h2):not(.wm-alt h2):not(#rd-t){font-size:clamp(1.85rem,8.4vw,2.3rem)!important;line-height:1.08!important;text-wrap:balance}
-  html body .sec-head,html body .sec-head.center,html body .rel h2,html body .cmp-head,html body .qual-in,html body .recipes-inner,html body .nlx-in{text-align:left!important}
-  html body .sec-head p,html body .cmp-head p,html body .qual p,html body .recipes-inner p,html body .nlx-in p{margin-left:0!important;margin-right:0!important}
-  html body .sec-head{align-items:flex-start!important}
-  html body .recipes-inner,html body .nlx-in{align-items:flex-start!important}
-  html body .qstats{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important;justify-items:start;text-align:left}
-  html body .qstats>div{text-align:left!important;align-items:flex-start!important;padding:0!important;border:0!important}
+  html body .qstats{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important;justify-items:center;text-align:center}
+  html body .qstats>div{text-align:center!important;padding:0!important;border:0!important}
   html body .qstats b{font-size:1.7rem!important}
   html body .qstats span{font-size:.62rem!important;letter-spacing:.08em!important;line-height:1.35}
   html body .f-top{grid-template-columns:1fr 1fr!important;column-gap:20px}
   html body .f-brand{grid-column:1/-1}
+}
+
+/*handy-zentriert 13.11.2026: Karten und Abschnittskoepfe mittig, Knoepfe mittig, Rezept-Karte Bild oben*/
+@media (max-width:640px){
+  html body .hero-copy{padding-inline:var(--pad)!important}
+  html body .sec-head,html body .sec-head.center,html body .rel h2,html body .cmp-head,html body .qual-in,html body .faq-head,html body .gift-in,html body .b2b-in,html body .pl-cta{text-align:center!important}
+  html body .pl-cta{align-items:center!important}
+  html body .pl-cta .btn,html body .pl-cta a.btn{align-self:center!important;margin-left:auto!important;margin-right:auto!important;justify-content:center}
+  html body .pl-cta p{margin-left:auto!important;margin-right:auto!important}
+  html body .sec-head{align-items:center!important}
+  html body .sec-head>.cta-link,html body .sec-head>a{align-self:center!important;margin-left:auto;margin-right:auto}
+  html body .sec-head p,html body .cmp-head p,html body .qual p,html body .gift p,html body .faq-head p{margin-left:auto!important;margin-right:auto!important}
+  html body .gift-in{padding:0 var(--hero-in) 32px!important}
+  html body .gift .btn,html body .recipes .btn,html body .nlx-in .btn{margin-left:auto;margin-right:auto}
+  html body .recipes{display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;min-height:0!important;aspect-ratio:auto!important;background:#1d130b!important}
+  html body .recipes::before{display:none!important}
+  html body .recipes-bg{position:relative!important;inset:auto!important;height:auto!important;aspect-ratio:4/3;object-position:92% 62%!important;transform:none!important}
+  html body .recipes-inner{max-width:none!important;padding:26px var(--hero-in) 32px!important;text-align:center!important}
+  html body .recipes h2{color:#FBF6EC!important}
+  html body .recipes p{color:rgba(251,246,236,.82)!important;margin-left:auto!important;margin-right:auto!important}
 }
