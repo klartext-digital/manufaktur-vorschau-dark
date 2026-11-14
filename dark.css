@@ -590,3 +590,8 @@ body.mnav-offen{overflow:hidden}
 }
 /*blocksatz 13.11.2026: Fliesstexte der Erzaehlseiten im Blocksatz mit deutscher Silbentrennung*/
 main.erzaehl .sec p:not([class]),main.erzaehl .indo p:not([class]){text-align:justify;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:7 3 3;-webkit-hyphenate-limit-before:3;-webkit-hyphenate-limit-after:3}
+/*zahlungslogos 14.11.2026: sechs Logos inkl. TWINT am Handy in einer Reihe*/
+@media (max-width:640px){
+  html body .pays{display:flex!important;flex-wrap:nowrap!important;gap:6px!important}
+  html body .pays img{flex:1 1 0;min-width:0;width:auto!important;max-width:46px;height:auto!important}
+}
