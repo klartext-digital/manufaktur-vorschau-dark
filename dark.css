@@ -595,3 +595,7 @@ main.erzaehl .sec p:not([class]),main.erzaehl .indo p:not([class]){text-align:ju
   html body .pays{display:flex!important;flex-wrap:nowrap!important;gap:6px!important}
   html body .pays img{flex:1 1 0;min-width:0;width:auto!important;max-width:46px;height:auto!important}
 }
+/*vergleich-hinweis 15.11.2026*/
+.cmp-note{max-width:62ch;margin:clamp(18px,2.4vw,28px) auto 0;text-align:center;font-size:.9rem;line-height:1.55;color:var(--ink-soft,rgba(243,234,218,.7))}
+/*startbild 15.11.2026: Ausschnitt nach rechts, damit «Die erste Vanille Manufaktur der Schweiz» ganz lesbar ist*/
+@media (min-width:641px){.hero-card img.bg{object-position:97% 30%}}
