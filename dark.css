@@ -560,7 +560,7 @@ body.mnav-offen{overflow:hidden}
 /*handy-einheitlich 12.11.2026: Abstaende, Titelgroessen, linksbuendig, Fusszeile zweispaltig*/
 @media (max-width:640px){
   :root{--sec-y:48px}
-  html body section h2:not(.film-txt h2):not(.kunden-title):not(.legal-in h2):not(#wmVorbei h2):not(.wm-alt h2):not(#rd-t),html body main h2:not(.legal-in h2):not(.kunden-title):not(#wmVorbei h2):not(.wm-alt h2):not(#rd-t){font-size:clamp(1.85rem,8.4vw,2.3rem)!important;line-height:1.08!important;text-wrap:balance}
+  html body section h2:not(.film-txt h2):not(.kunden-title):not(.legal-in h2):not(#wmVorbei h2):not(.wm-alt h2):not(#rd-t):not(.nlx-in h2),html body main h2:not(.legal-in h2):not(.kunden-title):not(#wmVorbei h2):not(.wm-alt h2):not(#rd-t):not(.nlx-in h2){font-size:clamp(1.85rem,8.4vw,2.3rem)!important;line-height:1.08!important;text-wrap:balance}
   html body .qstats{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important;justify-items:center;text-align:center}
   html body .qstats>div{text-align:center!important;padding:0!important;border:0!important}
   html body .qstats b{font-size:1.7rem!important}
@@ -599,3 +599,5 @@ main.erzaehl .sec p:not([class]),main.erzaehl .indo p:not([class]){text-align:ju
 .cmp-note{max-width:62ch;margin:clamp(18px,2.4vw,28px) auto 0;text-align:center;font-size:.9rem;line-height:1.55;color:var(--ink-soft,rgba(243,234,218,.7))}
 /*startbild 15.11.2026: Ausschnitt nach rechts, damit «Die erste Vanille Manufaktur der Schweiz» ganz lesbar ist*/
 @media (min-width:641px){.hero-card img.bg{object-position:97% 30%}}
+
+/*newsletter-zwei-zeilen*/@media(max-width:640px){html body #newsletter .nlx .nlx-in h2.serif{font-size:clamp(22px,7.3vw,34px)!important;line-height:1.08!important}html body #newsletter .nlx-in h2 .nw{white-space:nowrap}}
