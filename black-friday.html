@@ -614,81 +614,136 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#0A0907">
 <style>
-/* Black Friday Landingpage (Entwurf) */
-.bf-hero{position:relative;min-height:min(94vh,1000px);display:flex;align-items:center;overflow:hidden;background:#0A0907;isolation:isolate}
-.bf-hero-bg{position:absolute;inset:0;z-index:-1}
-.bf-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:72% 50%;animation:bfZoom 16s cubic-bezier(.22,1,.36,1) both}
-.bf-hero-bg::after{content:"";position:absolute;inset:0;background:
-  linear-gradient(90deg,rgba(10,9,7,.95) 0%,rgba(10,9,7,.82) 34%,rgba(10,9,7,.30) 68%,rgba(10,9,7,.55) 100%),
-  linear-gradient(0deg,#0A0907 0%,rgba(10,9,7,0) 34%)}
-@keyframes bfZoom{from{transform:scale(1.14)}to{transform:scale(1)}}
-.bf-hero-in{position:relative;padding-block:calc(var(--head-h,100px) + 34px) 90px;width:100%}
-.bf-pill{display:inline-flex;gap:10px;align-items:center;margin:0;padding:10px 18px;border-radius:100px;border:1px solid rgba(201,162,76,.45);background:rgba(10,9,7,.55);color:#E8CB7F;font:600 14px/1 Inter,system-ui,sans-serif;letter-spacing:.01em}
-.bf-pill .dot{width:8px;height:8px;border-radius:50%;background:#E8CB7F;animation:bfPulse 1.8s ease-out infinite}
-@keyframes bfPulse{0%{box-shadow:0 0 0 0 rgba(232,203,127,.65)}70%{box-shadow:0 0 0 12px rgba(232,203,127,0)}100%{box-shadow:0 0 0 0 rgba(232,203,127,0)}}
-.bf-h1{margin:24px 0 0;display:flex;flex-direction:column;gap:10px;max-width:none}
-.bf-big{display:block;font-size:clamp(5.2rem,14vw,11rem);line-height:.86;letter-spacing:-.04em;font-weight:500;padding-bottom:.06em;
-  background:var(--gold-text);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 18px 40px rgba(201,162,76,.18))}
-.bf-big .min{font-family:Inter,system-ui,sans-serif;font-weight:200;margin-right:.02em;-webkit-text-fill-color:transparent}
-.bf-sub{display:block;font-size:clamp(1.9rem,3.5vw,3.1rem);line-height:1.06;color:#F3EADA;font-weight:400}
-.bf-lede{margin:22px 0 0;max-width:34ch;font-size:clamp(1.02rem,1.25vw,1.18rem);line-height:1.6;color:rgba(243,234,218,.78)}
-.bf-count{margin-top:34px;display:flex;flex-direction:column;gap:12px}
-.bf-count-lbl{font:600 13px/1 Inter,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#E8CB7F}
-.bf-units{display:flex;gap:10px}
-.bf-u{min-width:104px;padding:18px 14px 13px;border-radius:22px;background:rgba(23,21,15,.74);border:1px solid rgba(201,162,76,.32);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);text-align:center;overflow:hidden}
-.bf-u b{display:block;font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(2.4rem,4.2vw,3.6rem);line-height:1;color:#F3EADA;font-variant-numeric:tabular-nums lining-nums}
-.bf-u b.tick{animation:bfTick .42s cubic-bezier(.22,1,.36,1)}
-@keyframes bfTick{from{transform:translateY(-38%);opacity:0}to{transform:none;opacity:1}}
-.bf-u small{display:block;margin-top:9px;font:500 12px/1 Inter,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:rgba(243,234,218,.62)}
-.bf-actions{margin-top:36px;display:flex;gap:26px;flex-wrap:wrap;align-items:center}
+/* Black Friday Landingpage (Entwurf v2) */
+.bf{--bfgold:#E8CB7F;--bfgold2:#C9A24C;--bfink:#F3EADA}
+
+/* Laufband */
+.bf-ticker{position:relative;z-index:3;overflow:hidden;background:var(--gold-metal);background-size:200% 100%;animation:bfShine 8s linear infinite;border-block:1px solid rgba(0,0,0,.35)}
+.bf-ticker-in{display:flex;width:max-content;animation:bfMarq 28s linear infinite}
+.bf-ticker span,.bf-ticker i{flex:0 0 auto;padding:13px 18px;font:800 15px/1 Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#140F05;font-style:normal}
+.bf-ticker i{padding-inline:4px;opacity:.55}
+@keyframes bfMarq{to{transform:translateX(-50%)}}
+@keyframes bfShine{to{background-position:200% 0}}
+
+/* Hero */
+.bf-hero{position:relative;overflow:hidden;background:#070605;isolation:isolate}
+.bf-glow{position:absolute;inset:0;z-index:-2;background:
+  radial-gradient(ellipse 46% 60% at 74% 52%,rgba(214,168,82,.30),transparent 70%),
+  radial-gradient(ellipse 30% 40% at 12% 18%,rgba(214,168,82,.10),transparent 70%),
+  linear-gradient(180deg,#0B0907 0%,#070605 100%)}
+.bf-grain{position:absolute;inset:0;z-index:-1;opacity:.18;mix-blend-mode:overlay;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.bf-hero-in{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(20px,3vw,60px);align-items:center;padding-block:clamp(26px,3.2vw,52px) clamp(40px,5vw,80px)}
+.bf-pill{display:inline-flex;gap:10px;align-items:center;margin:0;padding:9px 16px;border-radius:100px;border:1px solid rgba(201,162,76,.5);background:rgba(201,162,76,.08);color:var(--bfgold);font:600 14px/1 Inter,system-ui,sans-serif}
+.bf-pill .dot{width:8px;height:8px;border-radius:50%;background:#FF5A3C;animation:bfPulse 1.6s ease-out infinite}
+@keyframes bfPulse{0%{box-shadow:0 0 0 0 rgba(255,90,60,.7)}70%{box-shadow:0 0 0 12px rgba(255,90,60,0)}100%{box-shadow:0 0 0 0 rgba(255,90,60,0)}}
+.bf-h1{margin:18px 0 0;display:flex;flex-direction:column;font-family:Inter,system-ui,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.045em;line-height:.84;max-width:none}
+.bf-w1{font-size:clamp(4.2rem,8.4vw,8.2rem);color:var(--bfink)}
+.bf-w2{font-size:clamp(4.2rem,8.4vw,8.2rem);background:var(--gold-metal);background-size:180% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:bfShine 6s linear infinite;padding-bottom:.06em}
+.bf-deal{margin:16px 0 0;font-family:Fraunces,Georgia,serif;font-size:clamp(1.4rem,2.2vw,2rem);line-height:1.2;color:var(--bfink);max-width:24ch}
+.bf-deal b{color:var(--bfgold);font-weight:600}
+
+/* Timer */
+.bf-timer{margin-top:22px;display:inline-flex;flex-direction:column;gap:12px;padding:18px 20px 16px;border-radius:26px;background:linear-gradient(180deg,rgba(28,24,17,.92),rgba(14,12,9,.92));border:1px solid rgba(201,162,76,.38);box-shadow:0 30px 70px -30px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,236,190,.08)}
+.bf-timer-top{display:flex;justify-content:space-between;align-items:center;gap:20px;font:700 12px/1 Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--bfgold)}
+.bf-live{display:inline-flex;align-items:center;gap:6px;color:#FF7A5C;letter-spacing:.08em}
+.bf-live i{width:7px;height:7px;border-radius:50%;background:#FF5A3C;animation:bfPulse 1.6s ease-out infinite}
+.bf-clock{display:flex;align-items:flex-start;gap:8px}
+.bf-grp[hidden]{display:none!important}
+.bf-grp{display:flex;flex-direction:column;align-items:center;gap:8px}
+.bf-grp small{font:600 11px/1 Inter,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,234,218,.55)}
+.bf-dg{display:flex;gap:5px}
+.bf-dg b{position:relative;display:grid;place-items:center;width:clamp(42px,3.9vw,56px);height:clamp(58px,5.3vw,76px);border-radius:12px;
+  background:linear-gradient(180deg,#26211A 0%,#1A1712 49.5%,#100E0B 50.5%,#17140F 100%);box-shadow:inset 0 1px 0 rgba(255,236,190,.10),0 8px 18px -8px rgba(0,0,0,.9);
+  font:700 clamp(2rem,3.3vw,2.9rem)/1 Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums;color:#FBF4E4;overflow:hidden}
+.bf-dg b::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.65)}
+.bf-dg b.tick{animation:bfFlip .5s cubic-bezier(.22,1,.36,1)}
+@keyframes bfFlip{0%{transform:perspective(300px) rotateX(70deg);filter:brightness(1.6)}100%{transform:none;filter:none}}
+.bf-col{font:700 clamp(1.8rem,3vw,2.6rem)/1 Inter,system-ui,sans-serif;color:var(--bfgold2);padding-top:clamp(12px,1.4vw,20px);animation:bfBlink 1s steps(1) infinite}
+@keyframes bfBlink{50%{opacity:.25}}
+.bf-prog{height:4px;border-radius:4px;background:rgba(243,234,218,.08);overflow:hidden}
+.bf-prog span{display:block;height:100%;width:0;background:var(--gold-metal);border-radius:4px;transition:width 1s linear}
+.bf-ended .bf-clock,.bf-ended .bf-prog,.bf-ended .bf-live{display:none}
+
+.bf-actions{margin-top:26px;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.bf-hint{font:500 14px/1.4 Inter,system-ui,sans-serif;color:rgba(243,234,218,.6)}
+
+/* Produkt-Grafik */
+.bf-art{position:relative;aspect-ratio:1/1;width:100%;max-width:640px;justify-self:center}
+.bf-sun{position:absolute;inset:9%;border-radius:50%;background:radial-gradient(circle at 50% 45%,rgba(244,224,161,.42) 0%,rgba(201,162,76,.22) 38%,rgba(201,162,76,0) 70%);filter:blur(6px);animation:bfBreath 6s ease-in-out infinite}
+@keyframes bfBreath{50%{transform:scale(1.06);opacity:.85}}
+.bf-art img{position:absolute;filter:drop-shadow(0 28px 34px rgba(0,0,0,.65))}
+.bf-pod{width:20%;opacity:.95}
+.bf-pod1{left:14%;top:6%;transform:rotate(-28deg);animation:bfFloat 7s ease-in-out infinite}
+.bf-pod2{right:4%;top:24%;width:15%;transform:rotate(34deg);animation:bfFloat 8s ease-in-out infinite reverse}
+.bf-p-set{left:20%;top:18%;width:62%;z-index:2;animation:bfFloat 6s ease-in-out infinite}
+.bf-p-sirup{right:7%;top:30%;width:26%;z-index:1}
+.bf-p-paste{left:8%;bottom:6%;width:44%;z-index:3}
+.bf-p-pulver{right:12%;bottom:6%;width:30%;z-index:3}
+@keyframes bfFloat{50%{translate:0 -10px}}
+.bf-sticker{position:absolute;right:2%;top:2%;z-index:4;width:30%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2A231A,#0E0C09 70%);border:2px solid var(--bfgold2);box-shadow:0 20px 40px -12px rgba(0,0,0,.8),0 0 0 6px rgba(201,162,76,.12);display:grid;place-items:center;transform:rotate(-10deg)}
+.bf-sticker svg{position:absolute;inset:4%;width:92%;height:92%;animation:bfSpin 18s linear infinite}
+.bf-sticker text{font:800 15px Inter,system-ui,sans-serif;fill:var(--bfgold)}
+.bf-sticker-c{position:relative;display:flex;align-items:flex-start;font-family:Inter,system-ui,sans-serif;font-weight:800;color:var(--bfink);letter-spacing:-.04em}
+.bf-sticker-c b{font-size:clamp(1.9rem,3.4vw,3.2rem);line-height:1}
+.bf-sticker-c small{font-size:clamp(1rem,1.6vw,1.5rem);margin-top:.2em;color:var(--bfgold)}
+@keyframes bfSpin{to{transform:rotate(360deg)}}
+
 .bf-in{opacity:0;transform:translateY(22px);animation:bfIn .9s cubic-bezier(.22,1,.36,1) forwards;animation-delay:calc(var(--d,0) * .09s + .1s)}
 @keyframes bfIn{to{opacity:1;transform:none}}
-.bf-ended .bf-units{display:none}
 
 /* Angebote */
 .bf-shop{padding-top:clamp(56px,6vw,96px)}
 .bf-shop-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:clamp(28px,3vw,44px)}
 .bf-shop-head h2{margin:0;font-size:clamp(2.3rem,4.4vw,4rem);line-height:1.04}
-.bf-shop-head h2 .g{color:#E8CB7F}
+.bf-shop-head h2 .g{color:var(--bfgold)}
 .bf-shop-head p{margin:0;max-width:38ch;color:rgba(243,234,218,.72);line-height:1.6}
 @media(min-width:1200px){html body .bf .bf-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important}}
 @media(min-width:641px) and (max-width:1199px){html body .bf .bf-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
-.bf .pcard .badge-aktion{font-size:13px;letter-spacing:.02em}
+.bf .pcard{transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}
+.bf .pcard:hover{transform:translateY(-6px)}
+.bf .pcard .badge-aktion{background:#0E0C09;color:var(--bfgold);border:1.5px solid var(--bfgold2);font:800 14px/1 Inter,system-ui,sans-serif;letter-spacing:.02em;padding:9px 12px;border-radius:100px;transform:rotate(-6deg);box-shadow:0 10px 20px -8px rgba(0,0,0,.7)}
 .bf .pprice{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
-.bf .pprice .neu{color:#8A6418;font-weight:700}
+.bf .pprice .neu{color:#8A6418;font-weight:800}
 .bf .pprice s{color:#857B6A;font-weight:400;font-size:.84em;text-decoration-thickness:1.5px}
 
 /* Infos */
 .bf-info{padding-block:clamp(40px,5vw,80px) clamp(70px,7vw,120px)}
 .bf-info-in{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .bf-info-k{position:relative;padding:30px 28px 28px;border-radius:26px;background:#14120E;border:1px solid rgba(201,162,76,.22);overflow:hidden}
-.bf-info-n{position:absolute;right:18px;top:6px;font-family:Fraunces,Georgia,serif;font-size:96px;line-height:1;color:rgba(201,162,76,.10);pointer-events:none}
-.bf-info-k b{display:block;font-family:Fraunces,Georgia,serif;font-weight:500;font-size:1.45rem;color:#F3EADA;margin-bottom:10px}
+.bf-info-n{position:absolute;right:18px;top:6px;font:800 96px/1 Inter,system-ui,sans-serif;letter-spacing:-.05em;color:rgba(201,162,76,.10);pointer-events:none}
+.bf-info-k b{display:block;font-family:Fraunces,Georgia,serif;font-weight:500;font-size:1.45rem;color:var(--bfink);margin-bottom:10px}
 .bf-info-k p{margin:0;color:rgba(243,234,218,.72);line-height:1.6}
 
 /* Leiste beim Scrollen */
 .bf-bar{position:fixed;left:50%;bottom:18px;z-index:60;display:flex;gap:18px;align-items:center;padding:8px 8px 8px 22px;border-radius:100px;
-  background:rgba(18,16,13,.94);border:1px solid rgba(201,162,76,.42);box-shadow:0 22px 50px -18px rgba(0,0,0,.85);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
-  color:#F3EADA;font:500 15px/1 Inter,system-ui,sans-serif;white-space:nowrap;transform:translate(-50%,160%);transition:transform .55s cubic-bezier(.22,1,.36,1)}
+  background:rgba(14,12,9,.95);border:1px solid rgba(201,162,76,.45);box-shadow:0 22px 50px -18px rgba(0,0,0,.85);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  color:var(--bfink);font:500 15px/1 Inter,system-ui,sans-serif;white-space:nowrap;transform:translate(-50%,160%);transition:transform .55s cubic-bezier(.22,1,.36,1)}
 .bf-bar.on{transform:translate(-50%,0)}
-.bf-bar-tag{color:#E8CB7F;font-weight:700;margin-right:4px}
-.bf-bar b{color:#E8CB7F;font-variant-numeric:tabular-nums;font-weight:700;margin-left:4px}
+.bf-bar-tag{color:var(--bfgold);font-weight:800;margin-right:4px}
+.bf-bar b{color:var(--bfgold);font-variant-numeric:tabular-nums;font-weight:800;margin-left:4px}
 .bf-bar .btn{padding:.78em 1.3em;font-size:14px;margin:0}
 
 @media(max-width:1160px){.bf-info-in{grid-template-columns:1fr 1fr}.bf-info-k:last-child{grid-column:1/-1}}
+@media(max-width:900px){
+  .bf-hero-in{grid-template-columns:1fr;padding-top:26px}
+  .bf-art{order:-1;max-width:460px;width:92%;margin:0 auto -10px}
+}
 @media(max-width:640px){
-  .bf-hero{min-height:0;align-items:flex-end}
-  .bf-hero-bg img{object-position:62% 50%}
-  .bf-hero-bg::after{background:linear-gradient(0deg,rgba(10,9,7,.97) 0%,rgba(10,9,7,.86) 46%,rgba(10,9,7,.35) 80%,rgba(10,9,7,.6) 100%)}
-  .bf-hero-in{padding-block:calc(var(--head-h,62px) + 150px) 48px}
-  .bf-pill{font-size:13px;padding:9px 14px}
-  .bf-big{font-size:clamp(5.2rem,27vw,7.4rem)}
-  .bf-units{gap:8px}
-  .bf-u{flex:1 1 0;min-width:0;padding:14px 6px 11px;border-radius:18px}
-  .bf-u small{font-size:10.5px;letter-spacing:.04em}
-  .bf-actions{gap:18px}
+  .bf-hero-in{padding-top:14px;gap:6px}
+  .bf-art{width:80%;max-width:320px;margin:0 auto -18px}
+  .bf-sticker{right:-2%;top:0;width:34%}
+  .bf-ticker span,.bf-ticker i{font-size:13px;padding:11px 14px}
+  .bf-h1{margin-top:14px}
+  .bf-w1,.bf-w2{font-size:clamp(3.4rem,18.5vw,5.6rem)}
+  .bf-timer{display:flex;padding:16px 14px 14px;border-radius:22px}
+  .bf-clock{justify-content:space-between;gap:4px}
+  .bf-dg{gap:4px}
+  .bf-dg b{width:calc((100vw - 110px) / 6.4);height:62px;font-size:2.1rem;border-radius:10px}
+  .bf-col{padding-top:12px;font-size:1.6rem}
+  .bf-actions{gap:12px}
   .bf-actions .btn{width:100%;justify-content:center}
-  .bf-actions .cta-link{margin-inline:auto}
+  .bf-hint{width:100%;text-align:center}
   .bf-shop-head{flex-direction:column;align-items:flex-start;gap:12px}
   .bf-info-in{grid-template-columns:1fr}
   .bf-info-k:last-child{grid-column:auto}
@@ -697,7 +752,9 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
   .bf-bar #bfBarLbl{display:none}
 }
 @media (prefers-reduced-motion:reduce){
-  .bf-hero-bg img,.bf-in,.bf-u b.tick,.bf-pill .dot{animation:none!important;opacity:1;transform:none}
+  .bf-ticker,.bf-ticker-in,.bf-w2,.bf-in,.bf-dg b.tick,.bf-pill .dot,.bf-live i,.bf-col,.bf-sun,.bf-sticker svg{animation:none!important;opacity:1;transform:none}
+  .bf-art img{animation:none!important}
+  .bf-sticker{transform:rotate(-10deg)}
   .bf-bar{transition:none}
 }
 
@@ -742,27 +799,55 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 </header>
 
 <main class="bf">
+<div class="bf-ticker" aria-hidden="true"><div class="bf-ticker-in">
+  <span>Black Friday</span><i>✦</i><span>&minus;30&nbsp;%</span><i>✦</i><span>Nur 24 Stunden</span><i>✦</i><span>27. November</span><i>✦</i><span>Kein Code nötig</span><i>✦</i>
+  <span>Black Friday</span><i>✦</i><span>&minus;30&nbsp;%</span><i>✦</i><span>Nur 24 Stunden</span><i>✦</i><span>27. November</span><i>✦</i><span>Kein Code nötig</span><i>✦</i>
+</div></div>
+
 <section class="bf-hero" id="top">
-  <div class="bf-hero-bg" aria-hidden="true"><img src="img/header-vanille-v2.jpg" alt=""></div>
+  <div class="bf-glow" aria-hidden="true"></div>
+  <div class="bf-grain" aria-hidden="true"></div>
   <div class="wrap bf-hero-in">
-    <p class="bf-pill bf-in" style="--d:0"><span class="dot" aria-hidden="true"></span> Black Friday · Freitag, 27. November</p>
-    <h1 class="serif bf-h1">
-      <span class="bf-big bf-in" style="--d:1"><span class="min">&minus;</span>30&nbsp;%</span>
-      <span class="bf-sub bf-in" style="--d:2">auf zehn Lieblinge<br>aus unserer Manufaktur</span>
-    </h1>
-    <p class="bf-lede bf-in" style="--d:3">Nur 24 Stunden lang. Die Preise sind bereits reduziert, du brauchst keinen Code.</p>
-    <div class="bf-count bf-in" style="--d:4" id="bfCount">
-      <span class="bf-count-lbl" id="bfLbl">Endet in</span>
-      <div class="bf-units" role="timer" aria-live="off">
-        <div class="bf-u" data-u="d" hidden><b>00</b><small>Tage</small></div>
-        <div class="bf-u" data-u="h"><b>00</b><small>Stunden</small></div>
-        <div class="bf-u" data-u="m"><b>00</b><small>Minuten</small></div>
-        <div class="bf-u" data-u="s"><b>00</b><small>Sekunden</small></div>
+    <div class="bf-copy">
+      <p class="bf-pill bf-in" style="--d:0"><span class="dot" aria-hidden="true"></span> Nur am Freitag, 27. November</p>
+      <h1 class="bf-h1">
+        <span class="bf-w1 bf-in" style="--d:1">Black</span>
+        <span class="bf-w2 bf-in" style="--d:2">Friday</span>
+      </h1>
+      <p class="bf-deal bf-in" style="--d:3"><b>&minus;30&nbsp;%</b> auf zehn Lieblinge aus unserer Manufaktur</p>
+
+      <div class="bf-timer bf-in" style="--d:4" id="bfCount">
+        <div class="bf-timer-top"><span id="bfLbl">Endet in</span><span class="bf-live"><i></i> live</span></div>
+        <div class="bf-clock" role="timer" aria-live="off">
+          <div class="bf-grp" data-u="d" hidden><div class="bf-dg"><b>0</b><b>0</b></div><small>Tage</small></div>
+          <div class="bf-grp" data-u="h"><div class="bf-dg"><b>0</b><b>0</b></div><small>Std</small></div>
+          <span class="bf-col">:</span>
+          <div class="bf-grp" data-u="m"><div class="bf-dg"><b>0</b><b>0</b></div><small>Min</small></div>
+          <span class="bf-col">:</span>
+          <div class="bf-grp" data-u="s"><div class="bf-dg"><b>0</b><b>0</b></div><small>Sek</small></div>
+        </div>
+        <div class="bf-prog" aria-hidden="true"><span id="bfProg"></span></div>
+      </div>
+
+      <div class="bf-actions bf-in" style="--d:5">
+        <a class="btn btn-gold" href="#angebote"><span>Jetzt zugreifen</span> <span class="arrow">&rarr;</span></a>
+        <span class="bf-hint">Preise bereits reduziert, kein Code nötig</span>
       </div>
     </div>
-    <div class="bf-actions bf-in" style="--d:5">
-      <a class="btn btn-gold" href="#angebote"><span>Zu den Angeboten</span> <span class="arrow">&rarr;</span></a>
-      <a class="cta-link" href="#so-gehts"><span>So funktioniert's</span> <span class="arrow" aria-hidden="true">&darr;</span></a>
+
+    <div class="bf-art bf-in" style="--d:2" aria-hidden="true">
+      <div class="bf-sun"></div>
+      <img class="bf-pod bf-pod1" src="img/pod-vanilla-v7.webp" alt="">
+      <img class="bf-pod bf-pod2" src="img/pod-vanilla-v7.webp" alt="">
+      <img class="bf-p bf-p-sirup" src="img/bf/sirup-frei.webp" alt="">
+      <img class="bf-p bf-p-set" src="img/geschenkset-frei.webp" alt="">
+      <img class="bf-p bf-p-paste" src="img/bf/paste-frei.webp" alt="">
+      <img class="bf-p bf-p-pulver" src="img/bf/pulver-frei.webp" alt="">
+      <div class="bf-sticker">
+        <svg viewBox="0 0 200 200"><defs><path id="bfc" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text><textPath href="#bfc" textLength="482" lengthAdjust="spacing">BLACK FRIDAY ✦ NUR 24 STUNDEN ✦ −30 % ✦ </textPath></text></svg>
+        <span class="bf-sticker-c"><b>&minus;30</b><small>%</small></span>
+      </div>
     </div>
   </div>
 </section>
@@ -844,10 +929,9 @@ document.getElementById('bfGrid').addEventListener('click',e=>{const h=e.target.
 const START=Date.parse('2026-11-27T00:00:00+01:00'), END=Date.parse('2026-11-28T00:00:00+01:00');
 const demo=new URLSearchParams(location.search).has('demo');
 const demoEnd=Date.now()+((14*60+37)*60+12)*1000;
-const el=u=>document.querySelector(`.bf-u[data-u="${u}"] b`);
-const lbl=document.getElementById('bfLbl'), barT=document.getElementById('bfBarTime'), barL=document.getElementById('bfBarLbl'), box=document.getElementById('bfCount');
+const lbl=document.getElementById('bfLbl'), barT=document.getElementById('bfBarTime'), barL=document.getElementById('bfBarLbl'), box=document.getElementById('bfCount'), prog=document.getElementById('bfProg');
 const pad=n=>String(n).padStart(2,'0');
-function set(u,v){const b=el(u); if(!b)return; const t=pad(v); if(b.textContent!==t){b.textContent=t;b.classList.remove('tick');void b.offsetWidth;b.classList.add('tick')}}
+function set(u,v){const g=document.querySelector(`.bf-grp[data-u="${u}"]`); if(!g)return; const t=pad(v); g.querySelectorAll('b').forEach((b,i)=>{if(b.textContent!==t[i]){b.textContent=t[i];b.classList.remove('tick');void b.offsetWidth;b.classList.add('tick')}})}
 function tick(){
   const now=Date.now(); let mode, ms;
   if(demo){mode='live';ms=Math.max(0,demoEnd-now)}
@@ -855,12 +939,14 @@ function tick(){
   else if(now<END){mode='live';ms=END-now}
   else {mode='vorbei';ms=0}
   const s=Math.floor(ms/1000), d=Math.floor(s/86400), h=Math.floor(s%86400/3600), m=Math.floor(s%3600/60), sec=s%60;
-  document.querySelector('.bf-u[data-u="d"]').hidden=!(mode==='vor'&&d>0);
-  set('d',d); set('h',mode==='vor'?h:Math.floor(s/3600)); set('m',m); set('s',sec);
+  const showD=mode==='vor'&&d>0;
+  document.querySelector('.bf-grp[data-u="d"]').hidden=!showD;
+  set('d',d); set('h',showD?h:Math.floor(s/3600)); set('m',m); set('s',sec);
   lbl.textContent=mode==='vor'?'Startet in':mode==='live'?'Endet in':'Black Friday ist vorbei';
   box.classList.toggle('bf-ended',mode==='vorbei');
+  prog.style.width=(mode==='live'?Math.max(2,Math.min(100,ms/864e5*100)):mode==='vor'?100:0)+'%';
   barL.textContent=mode==='vor'?'Startet in':'Endet in';
-  barT.textContent=mode==='vorbei'?'vorbei':(mode==='vor'&&d>0?d+' T ':'')+pad(mode==='vor'?h:Math.floor(s/3600))+':'+pad(m)+':'+pad(sec);
+  barT.textContent=mode==='vorbei'?'vorbei':(showD?d+' T ':'')+pad(showD?h:Math.floor(s/3600))+':'+pad(m)+':'+pad(sec);
 }
 tick(); setInterval(tick,1000);
 
