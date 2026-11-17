@@ -758,6 +758,21 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
   .bf-bar{transition:none}
 }
 
+/* v3: echtes Titelbild */
+.bf-hero{min-height:min(88vh,860px);display:flex;align-items:center}
+.bf-bild{position:absolute;inset:0;z-index:-2}
+.bf-bild img{width:100%;height:100%;object-fit:cover;object-position:68% 50%;animation:bfZoom 14s cubic-bezier(.22,1,.36,1) both}
+@keyframes bfZoom{from{transform:scale(1.06)}to{transform:none}}
+.bf-bild::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,6,5,.92) 0%,rgba(7,6,5,.72) 26%,rgba(7,6,5,.15) 46%,rgba(7,6,5,0) 60%),linear-gradient(0deg,rgba(7,6,5,.85) 0%,rgba(7,6,5,0) 22%)}
+.bf-hero-in{grid-template-columns:minmax(0,560px) 1fr;width:100%}
+@media(max-width:900px){
+  .bf-hero{min-height:0;display:block}
+  .bf-bild{position:relative;inset:auto;display:block;aspect-ratio:1200/814}
+  .bf-bild::after{background:linear-gradient(0deg,#070605 0%,rgba(7,6,5,0) 38%)}
+  .bf-hero-in{grid-template-columns:1fr;margin-top:-40px;position:relative;padding-top:0}
+}
+@media (prefers-reduced-motion:reduce){.bf-bild img{animation:none}}
+
 </style>
 </head>
 <body>
@@ -805,7 +820,10 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
 </div></div>
 
 <section class="bf-hero" id="top">
-  <div class="bf-glow" aria-hidden="true"></div>
+  <picture class="bf-bild" aria-hidden="true">
+    <source media="(max-width:900px)" srcset="img/bf/bf-hero-handy.webp">
+    <img src="img/bf/bf-hero.webp" alt="" fetchpriority="high">
+  </picture>
   <div class="bf-grain" aria-hidden="true"></div>
   <div class="wrap bf-hero-in">
     <div class="bf-copy">
@@ -835,20 +853,6 @@ footer ul a{color:rgba(255,255,255,.72);font-size:.92rem;transition:color .2s}fo
       </div>
     </div>
 
-    <div class="bf-art bf-in" style="--d:2" aria-hidden="true">
-      <div class="bf-sun"></div>
-      <img class="bf-pod bf-pod1" src="img/pod-vanilla-v7.webp" alt="">
-      <img class="bf-pod bf-pod2" src="img/pod-vanilla-v7.webp" alt="">
-      <img class="bf-p bf-p-sirup" src="img/bf/sirup-frei.webp" alt="">
-      <img class="bf-p bf-p-set" src="img/geschenkset-frei.webp" alt="">
-      <img class="bf-p bf-p-paste" src="img/bf/paste-frei.webp" alt="">
-      <img class="bf-p bf-p-pulver" src="img/bf/pulver-frei.webp" alt="">
-      <div class="bf-sticker">
-        <svg viewBox="0 0 200 200"><defs><path id="bfc" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
-          <text><textPath href="#bfc" textLength="482" lengthAdjust="spacing">BLACK FRIDAY ✦ NUR 24 STUNDEN ✦ −30 % ✦ </textPath></text></svg>
-        <span class="bf-sticker-c"><b>&minus;30</b><small>%</small></span>
-      </div>
-    </div>
   </div>
 </section>
 
